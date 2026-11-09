@@ -61,8 +61,8 @@ export default function Features() {
           transition={{ duration: 0.5 }}
           className="md:col-span-7 relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#5D372B] via-[#704638] to-[#4F2C21] text-white p-8 sm:p-10 border border-[#D4A45E]/40 shadow-2xl flex flex-col justify-between group hover:border-[#D4A45E] hover:shadow-2xl hover:shadow-[#D4A45E]/20 transition-all duration-500"
         >
-          {/* Ambient Warm Golden Halo Glow */}
-          <div className="absolute -right-20 -top-20 w-80 h-80 bg-[#D4A45E]/20 rounded-full blur-3xl pointer-events-none group-hover:scale-110 transition-transform duration-700" />
+          {/* Ambient Warm Golden Halo Glow (Desktop only, lightweight blur) */}
+          <div className="hidden sm:block absolute -right-20 -top-20 w-72 h-72 bg-[#D4A45E]/20 rounded-full blur-2xl pointer-events-none" />
           <div className="absolute right-6 top-6 font-mono text-[10px] text-[#D4A45E] uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-white/15 backdrop-blur-md">
             ROSHÉ // ACTIVE FLORA
           </div>

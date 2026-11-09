@@ -456,10 +456,10 @@ export function GlowingSocialSection({
     <div
       className={`relative overflow-hidden rounded-3xl border border-[#D4A45E]/30 bg-gradient-to-b from-[#FFFFFF] via-[#F9F4EF] to-[#F4DCD8]/60 p-6 sm:p-8 text-center shadow-lg ${className}`}
     >
-      {/* Ambient background light bursts */}
-      <div className="absolute -left-20 -top-20 h-56 w-56 rounded-full bg-[#F4DCD8]/80 blur-3xl pointer-events-none" />
-      <div className="absolute -right-20 -bottom-20 h-56 w-56 rounded-full bg-[#EBD5C5]/80 blur-3xl pointer-events-none" />
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-[#D4A45E]/15 blur-3xl pointer-events-none" />
+      {/* Ambient background light bursts (Lightweight blur) */}
+      <div className="hidden sm:block absolute -left-20 -top-20 h-56 w-56 rounded-full bg-[#F4DCD8]/60 blur-xl pointer-events-none" />
+      <div className="hidden sm:block absolute -right-20 -bottom-20 h-56 w-56 rounded-full bg-[#EBD5C5]/60 blur-xl pointer-events-none" />
+      <div className="hidden sm:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-[#D4A45E]/15 blur-xl pointer-events-none" />
 
       {showTitle && (
         <div className="relative z-10 mb-6 max-w-lg mx-auto">

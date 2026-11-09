@@ -113,7 +113,7 @@ export default function BannerSlider({ banners }: BannerSliderProps) {
               />
 
               {/* Ambient Champagne Gold Aura */}
-              <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-[#D4A45E]/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="hidden sm:block absolute -left-20 top-1/2 -translate-y-1/2 w-80 h-80 bg-[#D4A45E]/20 rounded-full blur-2xl pointer-events-none" />
 
               {/* Text content */}
               <div className="relative z-10 h-full flex items-center px-6 sm:px-12 md:px-16 lg:px-20">

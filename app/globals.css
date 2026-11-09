@@ -261,10 +261,10 @@
 /* ─── Ultra-Smooth GPU Flower & Light Animation (Zero Performance Impact) ─── */
 
 .will-change-transform {
-  will-change: transform, opacity;
+  will-change: transform;
 }
 
-/* 1. Flower Running & Growing Upwards (Breeze motion) */
+/* 1. Flower Running & Growing Upwards (Breeze motion) - Desktop only */
 @keyframes flowerRunGrowUp1 {
   0% {
     transform: translate3d(0, 108vh, 0) scale(0.25) rotate(0deg);
@@ -288,7 +288,7 @@
   }
 }
 
-/* 2. Flower Running & Growing Upwards (Diagonal sway) */
+/* 2. Flower Running & Growing Upwards (Diagonal sway) - Desktop only */
 @keyframes flowerRunGrowUp2 {
   0% {
     transform: translate3d(0, 108vh, 0) scale(0.3) rotate(-20deg);
@@ -312,7 +312,7 @@
   }
 }
 
-/* 3. Flower Running & Growing Downwards (Gentle blossom fall) */
+/* 3. Flower Running & Growing Downwards (Gentle blossom fall) - Desktop only */
 @keyframes flowerRunGrowDown {
   0% {
     transform: translate3d(0, -12vh, 0) scale(0.2) rotate(0deg);
@@ -336,7 +336,7 @@
   }
 }
 
-/* 4. Single Petal Fluttering & Running Downwards */
+/* 4. Single Petal Fluttering & Running Downwards (Featherlight - Mobile & Desktop) */
 @keyframes petalFlutterRunDown {
   0% {
     transform: translate3d(0, -10vh, 0) rotate(0deg) scale(0.4);
@@ -344,23 +344,23 @@
   }
   18% {
     opacity: 0.85;
-    transform: translate3d(30px, 18vh, 0) rotate(50deg) scale(1.05);
+    transform: translate3d(25px, 18vh, 0) rotate(45deg) scale(1.0);
   }
-  45% {
-    opacity: 0.95;
-    transform: translate3d(-35px, 48vh, 0) rotate(120deg) scale(1.2);
+  48% {
+    opacity: 0.9;
+    transform: translate3d(-25px, 48vh, 0) rotate(110deg) scale(1.15);
   }
-  75% {
-    opacity: 0.75;
-    transform: translate3d(35px, 78vh, 0) rotate(210deg) scale(0.95);
+  78% {
+    opacity: 0.7;
+    transform: translate3d(25px, 78vh, 0) rotate(190deg) scale(0.95);
   }
   100% {
-    transform: translate3d(-20px, 110vh, 0) rotate(310deg) scale(0.5);
+    transform: translate3d(-15px, 110vh, 0) rotate(270deg) scale(0.5);
     opacity: 0;
   }
 }
 
-/* 5. Single Petal Fluttering & Running Upwards */
+/* 5. Single Petal Fluttering & Running Upwards (Featherlight - Mobile & Desktop) */
 @keyframes petalFlutterRunUp {
   0% {
     transform: translate3d(0, 108vh, 0) rotate(0deg) scale(0.35);
@@ -368,18 +368,18 @@
   }
   22% {
     opacity: 0.8;
-    transform: translate3d(-30px, 78vh, 0) rotate(-60deg) scale(1.1);
+    transform: translate3d(-25px, 78vh, 0) rotate(-50deg) scale(1.05);
   }
-  55% {
-    opacity: 0.9;
-    transform: translate3d(35px, 42vh, 0) rotate(110deg) scale(1.25);
+  52% {
+    opacity: 0.85;
+    transform: translate3d(25px, 45vh, 0) rotate(90deg) scale(1.2);
   }
-  82% {
-    opacity: 0.65;
-    transform: translate3d(-20px, 18vh, 0) rotate(220deg) scale(0.9);
+  80% {
+    opacity: 0.6;
+    transform: translate3d(-15px, 18vh, 0) rotate(190deg) scale(0.9);
   }
   100% {
-    transform: translate3d(25px, -12vh, 0) rotate(320deg) scale(0.5);
+    transform: translate3d(20px, -12vh, 0) rotate(280deg) scale(0.5);
     opacity: 0;
   }
 }
@@ -396,7 +396,7 @@
   }
   52% {
     opacity: 1;
-    transform: translate3d(-25px, 46vh, 0) scale(1.9);
+    transform: translate3d(-25px, 46vh, 0) scale(1.8);
   }
   80% {
     opacity: 0.65;
@@ -408,19 +408,7 @@
   }
 }
 
-/* 7. Ambient Floral Light Breathing (Expanding / Contracting Halo) */
-@keyframes ambientLightBreath {
-  0%, 100% {
-    transform: scale(0.85);
-    opacity: 0.25;
-  }
-  50% {
-    transform: scale(1.25);
-    opacity: 0.55;
-  }
-}
-
-/* 8. Stationary Living Bloom (Growing & Breathing at edges) */
+/* 7. Stationary Living Bloom (Growing & Breathing at edges) */
 @keyframes livingBloomSway {
   0%, 100% {
     transform: translate3d(0, 0, 0) rotate(0deg) scale(0.88);
@@ -432,7 +420,7 @@
   }
 }
 
-/* Utility Animation Classes (Compositor-driven, 60fps GPU acceleration) */
+/* Utility Animation Classes (Compositor-driven, 60-120fps GPU acceleration) */
 .flower-run-grow-up-1 {
   animation: flowerRunGrowUp1 cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
@@ -457,10 +445,6 @@
   animation: lightParticleDrift cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-.ambient-light-breath {
-  animation: ambientLightBreath ease-in-out infinite alternate;
-}
-
 .living-bloom-sway {
   animation: livingBloomSway ease-in-out infinite alternate;
 }
@@ -470,7 +454,21 @@
 .flower-float-2 { animation: livingBloomSway ease-in-out infinite alternate; }
 .flower-drift { animation: flowerRunGrowUp1 cubic-bezier(0.4, 0, 0.2, 1) infinite; }
 .petal-sway { animation: petalFlutterRunDown cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-.flower-bloom-halo { animation: ambientLightBreath ease-in-out infinite alternate; }
+
+/* Mobile Crash & Lag Guard: Disable heavy multi-petal blooms and blurs on screens under 768px */
+@media (max-width: 768px) {
+  .flower-run-grow-up-1,
+  .flower-run-grow-up-2,
+  .flower-run-grow-down,
+  .light-particle-drift,
+  .living-bloom-sway,
+  .flower-float-1,
+  .flower-float-2,
+  .flower-drift {
+    animation: none !important;
+    display: none !important;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .flower-run-grow-up-1,
@@ -479,13 +477,11 @@
   .petal-flutter-run-down,
   .petal-flutter-run-up,
   .light-particle-drift,
-  .ambient-light-breath,
   .living-bloom-sway,
   .flower-float-1,
   .flower-float-2,
   .flower-drift,
-  .petal-sway,
-  .flower-bloom-halo {
+  .petal-sway {
     animation: none !important;
   }
 }
