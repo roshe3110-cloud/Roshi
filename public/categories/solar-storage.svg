@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <radialGradient id="grad2" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#302005" />
+      <stop offset="60%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </radialGradient>
+    <linearGradient id="sunGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe28a" />
+      <stop offset="50%" stop-color="#e5a93b" />
+      <stop offset="100%" stop-color="#b87208" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#grad2)" />
+  <g transform="translate(400, 420)">
+    <circle cx="0" cy="0" r="160" fill="#1c1c1c" stroke="#333333" stroke-width="3" />
+    <!-- Sun & solar array -->
+    <circle cx="0" cy="-20" r="45" fill="url(#sunGold)" />
+    <!-- Sun rays -->
+    <path d="M0 -90 L0 -72 M0 32 L0 50 M-70 -20 L-52 -20 M52 -20 L70 -20 M-50 -70 L-37 -57 M37 17 L50 30 M-50 30 L-37 17 M37 -57 L50 -70" stroke="url(#sunGold)" stroke-width="5" stroke-linecap="round" />
+    <!-- Inverter & Battery box outline below -->
+    <rect x="-65" y="45" width="130" height="50" rx="8" fill="#121212" stroke="#e5a93b" stroke-width="2" />
+    <circle cx="-35" cy="70" r="6" fill="#10b981" />
+    <circle cx="-15" cy="70" r="6" fill="#e5a93b" />
+    <rect x="10" y="66" width="35" height="8" rx="2" fill="#333" />
+  </g>
+  <text x="400" y="660" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2">SOLAR &amp; STORAGE</text>
+  <text x="400" y="705" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#e5a93b" text-anchor="middle" letter-spacing="2">HYBRID INVERTERS · LiFePO4 BATTERIES</text>
+</svg>
+

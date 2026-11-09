@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <radialGradient id="grad3" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#052818" />
+      <stop offset="60%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </radialGradient>
+    <linearGradient id="emeraldGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#grad3)" />
+  <g transform="translate(400, 420)">
+    <circle cx="0" cy="0" r="160" fill="#1c1c1c" stroke="#333333" stroke-width="3" />
+    <!-- Battery body -->
+    <rect x="-65" y="-60" width="130" height="135" rx="16" fill="#141414" stroke="url(#emeraldGold)" stroke-width="3" />
+    <!-- Battery terminals -->
+    <rect x="-35" y="-76" width="22" height="16" rx="4" fill="url(#emeraldGold)" />
+    <rect x="13" y="-76" width="22" height="16" rx="4" fill="url(#emeraldGold)" />
+    <!-- Charge level bars -->
+    <rect x="-48" y="35" width="96" height="16" rx="4" fill="url(#emeraldGold)" opacity="0.9" />
+    <rect x="-48" y="10" width="96" height="16" rx="4" fill="url(#emeraldGold)" opacity="0.75" />
+    <rect x="-48" y="-15" width="96" height="16" rx="4" fill="url(#emeraldGold)" opacity="0.6" />
+    <rect x="-48" y="-40" width="96" height="16" rx="4" fill="url(#emeraldGold)" opacity="0.45" />
+  </g>
+  <text x="400" y="660" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="3">LITHIUM BATTERIES</text>
+  <text x="400" y="705" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#34d399" text-anchor="middle" letter-spacing="2">LIFEPO4 · 6000+ CYCLES · ENERGY STORAGE</text>
+</svg>
+

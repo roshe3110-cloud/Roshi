@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <radialGradient id="gradHome" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#10252a" />
+      <stop offset="60%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </radialGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d77f" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#997b19" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#gradHome)" />
+  <g transform="translate(400, 420)">
+    <circle cx="0" cy="0" r="160" fill="#1c1c1c" stroke="#333333" stroke-width="3" />
+    <circle cx="0" cy="0" r="130" fill="#121212" stroke="#d4af37" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+    <!-- Smart House outline -->
+    <path d="M0 -75 L75 -10 L50 -10 L50 65 L-50 65 L-50 -10 L-75 -10 Z" fill="none" stroke="url(#goldAccent)" stroke-width="8" stroke-linejoin="round" />
+    <!-- WiFi wave arcs inside house -->
+    <path d="M-28 10 A 35 35 0 0 1 28 10" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+    <path d="M-18 25 A 22 22 0 0 1 18 25" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+    <circle cx="0" cy="40" r="6" fill="url(#goldAccent)" />
+  </g>
+  <text x="400" y="660" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="3">HOME AUTOMATION</text>
+  <text x="400" y="705" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#d4af37" text-anchor="middle" letter-spacing="2">SMART SWITCHES · RELAYS · IOT SENSORS</text>
+</svg>
+

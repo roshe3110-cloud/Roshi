@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F4EF" />
+      <stop offset="60%" stop-color="#F4DCD8" />
+      <stop offset="100%" stop-color="#EBD5C5" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A45E" />
+      <stop offset="100%" stop-color="#B8893E" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg)" />
+  <circle cx="300" cy="340" r="140" fill="#FFFFFF" stroke="#D4A45E" stroke-width="3" opacity="0.9" />
+  <!-- Serum Dropper Bottle Silhouette -->
+  <rect x="260" y="270" width="80" height="150" rx="16" fill="#704638" />
+  <rect x="280" y="235" width="40" height="35" rx="6" fill="#D4A45E" />
+  <path d="M290 235 C290 215 310 215 310 235 Z" fill="#F4DCD8" />
+  <!-- Droplet -->
+  <path d="M300 440 C285 460 285 475 300 485 C315 475 315 460 300 440 Z" fill="url(#gold)" />
+  <text x="300" y="550" font-family="'Outfit', sans-serif" font-size="28" font-weight="800" fill="#704638" text-anchor="middle" letter-spacing="3">SKINCARE &amp; SERUMS</text>
+  <text x="300" y="585" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="600" fill="#D4A45E" text-anchor="middle" letter-spacing="2">HYDRATING BOTANICAL ELIXIRS</text>
+</svg>
+

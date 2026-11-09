@@ -1,0 +1,491 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-warm-ivory: #F9F4EF;
+  --color-blush-pink: #F4DCD8;
+  --color-champagne-gold: #D4A45E;
+  --color-rose-brown: #704638;
+  --color-soft-peach: #EBD5C5;
+  --color-pure-white: #FFFFFF;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Warm Ivory: Main website background */
+  --background: #F9F4EF;
+  /* Rose Brown: Headings, buttons and primary text */
+  --foreground: #704638;
+
+  /* Pure White: Product cards and clean spaces */
+  --card: #FFFFFF;
+  --card-foreground: #704638;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #704638;
+
+  /* Rose Brown: Buttons and primary text */
+  --primary: #704638;
+  --primary-foreground: #FFFFFF;
+
+  /* Blush Pink: Sections, cards and soft highlights */
+  --secondary: #F4DCD8;
+  --secondary-foreground: #704638;
+
+  /* Soft Peach: Secondary backgrounds and gradients */
+  --muted: #EBD5C5;
+  --muted-foreground: #8C5E50;
+
+  /* Champagne Gold: Borders, icons and premium accents */
+  --accent: #D4A45E;
+  --accent-foreground: #FFFFFF;
+
+  --destructive: #d9534f;
+  --border: #EBD5C5;
+  --input: #EBD5C5;
+  --ring: #D4A45E;
+  --radius: 0.875rem;
+
+  --sidebar: #F9F4EF;
+  --sidebar-foreground: #704638;
+  --sidebar-primary: #704638;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F4DCD8;
+  --sidebar-accent-foreground: #704638;
+  --sidebar-border: #EBD5C5;
+  --sidebar-ring: #D4A45E;
+
+  --chart-1: #D4A45E;
+  --chart-2: #704638;
+  --chart-3: #F4DCD8;
+  --chart-4: #EBD5C5;
+  --chart-5: #8C5E50;
+}
+
+.dark {
+  --background: #231815;
+  --foreground: #F9F4EF;
+  --card: #2E1F1B;
+  --card-foreground: #F9F4EF;
+  --popover: #2E1F1B;
+  --popover-foreground: #F9F4EF;
+  --primary: #D4A45E;
+  --primary-foreground: #231815;
+  --secondary: #3D2924;
+  --secondary-foreground: #F9F4EF;
+  --muted: #3D2924;
+  --muted-foreground: #EBD5C5;
+  --accent: #D4A45E;
+  --accent-foreground: #231815;
+  --destructive: #ef4444;
+  --border: rgba(212, 164, 94, 0.25);
+  --input: rgba(212, 164, 94, 0.3);
+  --ring: #D4A45E;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), var(--font-sans), system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: #704638;
+  }
+}
+
+/* ─── Premium ROSHÉ BEAUTY Gradients & Accents ─────────────────────────── */
+
+.gold-gradient {
+  background: linear-gradient(135deg, #D4A45E 0%, #B8893E 100%);
+}
+
+.beauty-gradient {
+  background: linear-gradient(135deg, #F9F4EF 0%, #F4DCD8 50%, #EBD5C5 100%);
+}
+
+.beauty-glow {
+  box-shadow: 0 10px 30px -10px rgba(212, 164, 94, 0.35);
+}
+
+.rose-glow {
+  box-shadow: 0 10px 25px -8px rgba(112, 70, 56, 0.3);
+}
+
+.beauty-badge {
+  background: rgba(244, 220, 216, 0.6);
+  border: 1px solid rgba(212, 164, 94, 0.35);
+  color: #704638;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.gallery {
+  width: 100%;
+}
+
+.main-image {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #FFFFFF;
+  border: 1px solid #F4DCD8;
+  box-shadow: 0 15px 35px rgba(112, 70, 56, 0.08);
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  background: #FFFFFF;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  border-color: #D4A45E;
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border-color: #704638;
+}
+
+/* ─── Shared form input style ─────────────────────────── */
+.admin-input {
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #704638;
+  background: #FFFFFF;
+  border: 1px solid #EBD5C5;
+  outline: none;
+  transition: all 0.15s ease-in-out;
+}
+.admin-input:focus {
+  border-color: #D4A45E;
+  box-shadow: 0 0 0 1px #D4A45E;
+}
+.admin-input::placeholder {
+  color: #8C5E50;
+  opacity: 0.6;
+}
+.admin-input option {
+  background: #FFFFFF;
+  color: #704638;
+}
+
+/* ─── Ultra-Smooth GPU Flower & Light Animation (Zero Performance Impact) ─── */
+
+.will-change-transform {
+  will-change: transform, opacity;
+}
+
+/* 1. Flower Running & Growing Upwards (Breeze motion) */
+@keyframes flowerRunGrowUp1 {
+  0% {
+    transform: translate3d(0, 108vh, 0) scale(0.25) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+    transform: translate3d(20px, 85vh, 0) scale(0.7) rotate(45deg);
+  }
+  48% {
+    opacity: 0.95;
+    transform: translate3d(-30px, 50vh, 0) scale(1.22) rotate(130deg);
+  }
+  80% {
+    opacity: 0.7;
+    transform: translate3d(25px, 20vh, 0) scale(1.05) rotate(220deg);
+  }
+  100% {
+    transform: translate3d(-15px, -12vh, 0) scale(0.6) rotate(320deg);
+    opacity: 0;
+  }
+}
+
+/* 2. Flower Running & Growing Upwards (Diagonal sway) */
+@keyframes flowerRunGrowUp2 {
+  0% {
+    transform: translate3d(0, 108vh, 0) scale(0.3) rotate(-20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+    transform: translate3d(-35px, 80vh, 0) scale(0.85) rotate(40deg);
+  }
+  52% {
+    opacity: 0.9;
+    transform: translate3d(-65px, 45vh, 0) scale(1.25) rotate(150deg);
+  }
+  82% {
+    opacity: 0.75;
+    transform: translate3d(-35px, 18vh, 0) scale(1.0) rotate(250deg);
+  }
+  100% {
+    transform: translate3d(-75px, -12vh, 0) scale(0.65) rotate(340deg);
+    opacity: 0;
+  }
+}
+
+/* 3. Flower Running & Growing Downwards (Gentle blossom fall) */
+@keyframes flowerRunGrowDown {
+  0% {
+    transform: translate3d(0, -12vh, 0) scale(0.2) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+    transform: translate3d(40px, 22vh, 0) scale(0.85) rotate(70deg);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translate3d(-25px, 52vh, 0) scale(1.28) rotate(180deg);
+  }
+  80% {
+    opacity: 0.65;
+    transform: translate3d(35px, 82vh, 0) scale(0.95) rotate(280deg);
+  }
+  100% {
+    transform: translate3d(15px, 110vh, 0) scale(0.55) rotate(370deg);
+    opacity: 0;
+  }
+}
+
+/* 4. Single Petal Fluttering & Running Downwards */
+@keyframes petalFlutterRunDown {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg) scale(0.4);
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.85;
+    transform: translate3d(30px, 18vh, 0) rotate(50deg) scale(1.05);
+  }
+  45% {
+    opacity: 0.95;
+    transform: translate3d(-35px, 48vh, 0) rotate(120deg) scale(1.2);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translate3d(35px, 78vh, 0) rotate(210deg) scale(0.95);
+  }
+  100% {
+    transform: translate3d(-20px, 110vh, 0) rotate(310deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* 5. Single Petal Fluttering & Running Upwards */
+@keyframes petalFlutterRunUp {
+  0% {
+    transform: translate3d(0, 108vh, 0) rotate(0deg) scale(0.35);
+    opacity: 0;
+  }
+  22% {
+    opacity: 0.8;
+    transform: translate3d(-30px, 78vh, 0) rotate(-60deg) scale(1.1);
+  }
+  55% {
+    opacity: 0.9;
+    transform: translate3d(35px, 42vh, 0) rotate(110deg) scale(1.25);
+  }
+  82% {
+    opacity: 0.65;
+    transform: translate3d(-20px, 18vh, 0) rotate(220deg) scale(0.9);
+  }
+  100% {
+    transform: translate3d(25px, -12vh, 0) rotate(320deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* 6. Glowing Light Particle Running, Growing & Pulsing */
+@keyframes lightParticleDrift {
+  0% {
+    transform: translate3d(0, 108vh, 0) scale(0.3);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.85;
+    transform: translate3d(20px, 78vh, 0) scale(1.2);
+  }
+  52% {
+    opacity: 1;
+    transform: translate3d(-25px, 46vh, 0) scale(1.9);
+  }
+  80% {
+    opacity: 0.65;
+    transform: translate3d(15px, 18vh, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(-15px, -10vh, 0) scale(0.4);
+    opacity: 0;
+  }
+}
+
+/* 7. Ambient Floral Light Breathing (Expanding / Contracting Halo) */
+@keyframes ambientLightBreath {
+  0%, 100% {
+    transform: scale(0.85);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.55;
+  }
+}
+
+/* 8. Stationary Living Bloom (Growing & Breathing at edges) */
+@keyframes livingBloomSway {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(0.88);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate3d(18px, -20px, 0) rotate(60deg) scale(1.18);
+    opacity: 0.7;
+  }
+}
+
+/* Utility Animation Classes (Compositor-driven, 60fps GPU acceleration) */
+.flower-run-grow-up-1 {
+  animation: flowerRunGrowUp1 cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.flower-run-grow-up-2 {
+  animation: flowerRunGrowUp2 cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.flower-run-grow-down {
+  animation: flowerRunGrowDown cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.petal-flutter-run-down {
+  animation: petalFlutterRunDown cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.petal-flutter-run-up {
+  animation: petalFlutterRunUp cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.light-particle-drift {
+  animation: lightParticleDrift cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.ambient-light-breath {
+  animation: ambientLightBreath ease-in-out infinite alternate;
+}
+
+.living-bloom-sway {
+  animation: livingBloomSway ease-in-out infinite alternate;
+}
+
+/* Backward compatibility */
+.flower-float-1 { animation: livingBloomSway ease-in-out infinite alternate; }
+.flower-float-2 { animation: livingBloomSway ease-in-out infinite alternate; }
+.flower-drift { animation: flowerRunGrowUp1 cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+.petal-sway { animation: petalFlutterRunDown cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+.flower-bloom-halo { animation: ambientLightBreath ease-in-out infinite alternate; }
+
+@media (prefers-reduced-motion: reduce) {
+  .flower-run-grow-up-1,
+  .flower-run-grow-up-2,
+  .flower-run-grow-down,
+  .petal-flutter-run-down,
+  .petal-flutter-run-up,
+  .light-particle-drift,
+  .ambient-light-breath,
+  .living-bloom-sway,
+  .flower-float-1,
+  .flower-float-2,
+  .flower-drift,
+  .petal-sway,
+  .flower-bloom-halo {
+    animation: none !important;
+  }
+}

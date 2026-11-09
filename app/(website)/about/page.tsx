@@ -1,0 +1,130 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Sparkles, Heart, Crown, ShieldCheck, ArrowRight, Droplets } from "lucide-react";
+import { STORE_CONTACT } from "@/components/common/SocialIcons";
+
+export const metadata: Metadata = {
+  title: "About Us | ROSHÉ BEAUTY",
+  description:
+    "Learn about ROSHÉ BEAUTY — Pakistan's premier destination for luxury skincare, radiant cosmetic formulations, and rejuvenating beauty essentials.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    url: "/about",
+    title: "About Us | ROSHÉ BEAUTY",
+    description:
+      "Empowering skin radiance and timeless confidence with luxury skincare and cosmetics across Pakistan.",
+  },
+};
+
+export default function AboutPage() {
+  return (
+    <main className="bg-[#F9F4EF] min-h-screen">
+      <div className="container mx-auto max-w-5xl px-5 py-16">
+        {/* Hero */}
+        <section className="text-center mb-20">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#F4DCD8] text-[#704638] border border-[#D4A45E]/30 mb-4 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#D4A45E]" />
+            <span>About ROSHÉ BEAUTY</span>
+          </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-[#704638] mb-6 font-heading">
+            Empowering Pakistan with{" "}
+            <span className="bg-gradient-to-r from-[#D4A45E] to-[#704638] bg-clip-text text-transparent">
+              Pure Luxury &amp; Radiant Confidence
+            </span>
+          </h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-[#8C5E50] leading-relaxed">
+            ROSHÉ BEAUTY was founded with a singular devotion: creating luxury skincare and cosmetics that elevate your natural radiance. From active botanical serums to velvety, richly pigmented lip essentials, every creation embodies purity, dermatological care, and timeless elegance.
+          </p>
+        </section>
+
+        {/* 4 Pillars of ROSHÉ BEAUTY */}
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          {[
+            {
+              icon: Droplets,
+              title: "Active Skincare & Serums",
+              description:
+                "Infused with Vitamin C, Niacinamide, and botanical Hyaluronic acid to deeply replenish, hydrate, and brighten your complexion.",
+            },
+            {
+              icon: Crown,
+              title: "Velvet Matte Cosmetics",
+              description:
+                "Weightless, richly pigmented formulations that deliver 12-hour comfortable wear and a flawless velvet matte finish.",
+            },
+            {
+              icon: ShieldCheck,
+              title: "Clean & Tested Formulas",
+              description:
+                "Cruelty-free, gentle on sensitive skin, and free of harsh parabens. Formulated according to strict dermatological safety standards.",
+            },
+            {
+              icon: Heart,
+              title: "Personalized Beauty Care",
+              description:
+                "Tailored shade matching and routine consultations directly on WhatsApp, followed by express nationwide delivery.",
+            },
+          ].map((v) => {
+            const Icon = v.icon;
+            return (
+              <div
+                key={v.title}
+                className="bg-white rounded-3xl border border-[#D4A45E]/30 p-6 sm:p-7 text-left transition-all hover:shadow-xl hover:border-[#D4A45E]"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-[#F4DCD8] text-[#704638] flex items-center justify-center mb-5 shadow-sm">
+                  <Icon className="w-6 h-6" />
+                </div>
+                <h2 className="text-base font-bold text-[#704638] mb-2 font-heading">
+                  {v.title}
+                </h2>
+                <p className="text-xs text-[#8C5E50] leading-relaxed">
+                  {v.description}
+                </p>
+              </div>
+            );
+          })}
+        </section>
+
+        {/* Trust & Quality Commitment */}
+        <section className="bg-[#704638] rounded-3xl p-8 sm:p-14 text-center text-white mb-20 relative overflow-hidden shadow-2xl border border-[#D4A45E]/40">
+          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#D4A45E]/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <blockquote className="text-xl sm:text-3xl font-extrabold leading-snug tracking-tight font-heading">
+              &ldquo;We don&apos;t just craft beauty products. We inspire confidence, celebrate individuality, and unveil your timeless natural glow.&rdquo;
+            </blockquote>
+            <p className="mt-6 text-[#D4A45E] text-xs font-semibold tracking-widest uppercase">
+              — The ROSHÉ BEAUTY Quality Standard
+            </p>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="text-center">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#704638] mb-3 font-heading">
+            Discover Your Signature Glow
+          </h2>
+          <p className="text-[#8C5E50] text-sm max-w-lg mx-auto mb-8">
+            Explore our curated catalog of luxury skincare, velvet cosmetics, and rejuvenating beauty essentials.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/collection"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#D4A45E] to-[#B8893E] text-black px-8 py-3.5 rounded-2xl font-bold shadow-lg shadow-[#D4A45E]/25 hover:brightness-110 transition-all text-sm"
+            >
+              <span>Explore Collection</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href={STORE_CONTACT.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-[#D4A45E]/40 bg-white text-[#704638] px-7 py-3.5 rounded-2xl font-semibold hover:bg-[#F4DCD8]/40 transition-all text-sm shadow-sm"
+            >
+              Consult Beauty Care on WhatsApp
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}

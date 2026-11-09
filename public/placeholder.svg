@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F4EF" />
+      <stop offset="50%" stop-color="#F4DCD8" />
+      <stop offset="100%" stop-color="#EBD5C5" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A45E" />
+      <stop offset="100%" stop-color="#B8893E" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)" />
+  <circle cx="200" cy="170" r="64" fill="#FFFFFF" stroke="#D4A45E" stroke-width="2" />
+  
+  <!-- Stylized Rose & Sparkle Motif -->
+  <path d="M200 135 C215 145 225 160 215 175 C205 190 190 185 185 175 C180 160 190 145 200 135 Z" fill="url(#gold)" opacity="0.85" />
+  <circle cx="200" cy="170" r="10" fill="#704638" />
+  <path d="M200 120 L203 128 L211 131 L203 134 L200 142 L197 134 L189 131 L197 128 Z" fill="url(#gold)" />
+
+  <text x="200" y="275" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="800" fill="#704638" text-anchor="middle" letter-spacing="3">ROSHÉ BEAUTY</text>
+  <text x="200" y="300" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#D4A45E" text-anchor="middle" letter-spacing="2">LUXURY COSMETICS &amp; SKINCARE</text>
+</svg>
