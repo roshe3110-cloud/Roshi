@@ -247,6 +247,8 @@ export async function getFilteredProducts(filters: {
   search?: string;
   page?: number;
   limit?: number;
+  sale?: boolean;
+  tag?: string;
 }) {
   const supabase = createClient();
   const {
@@ -256,6 +258,8 @@ export async function getFilteredProducts(filters: {
     search,
     page = 1,
     limit = 12,
+    sale,
+    tag,
   } = filters;
   const from = (page - 1) * limit;
   const to = from + limit - 1;
@@ -287,6 +291,39 @@ export async function getFilteredProducts(filters: {
       );
     if (isUuid) {
       query = query.eq("category_id", category_id);
+    } else if (category_id.toLowerCase() === "makeup") {
+      const { data: makeupCats } = await supabase
+        .from("categories")
+        .select("id")
+        .or(
+          "slug.ilike.%lip%,slug.ilike.%eye%,slug.ilike.%face%,slug.ilike.%mascara%,slug.ilike.%palette%,slug.ilike.%foundation%,slug.ilike.%primer%,slug.ilike.%spray%,slug.ilike.%tint%,slug.ilike.%cosmetic%,slug.ilike.%mini%"
+        );
+      const catIds = (makeupCats || []).map((c) => c.id);
+      if (catIds.length > 0) {
+        query = query.in("category_id", catIds);
+      }
+    } else if (category_id.toLowerCase() === "jewelry") {
+      const { data: jewelryCats } = await supabase
+        .from("categories")
+        .select("id")
+        .or(
+          "slug.ilike.%jewel%,slug.ilike.%silver%,slug.ilike.%necklace%,slug.ilike.%ring%,slug.ilike.%bracelet%,slug.ilike.%bangle%,slug.ilike.%earring%,slug.ilike.%box%,slug.ilike.%chain%,slug.ilike.%anklet%,slug.ilike.%hair%,slug.ilike.%set%"
+        );
+      const catIds = (jewelryCats || []).map((c) => c.id);
+      if (catIds.length > 0) {
+        query = query.in("category_id", catIds);
+      }
+    } else if (category_id.toLowerCase() === "beauty" || category_id.toLowerCase() === "skincare") {
+      const { data: beautyCats } = await supabase
+        .from("categories")
+        .select("id")
+        .or(
+          "slug.ilike.%skin%,slug.ilike.%cream%,slug.ilike.%serum%,slug.ilike.%fragrance%,slug.ilike.%perfume%"
+        );
+      const catIds = (beautyCats || []).map((c) => c.id);
+      if (catIds.length > 0) {
+        query = query.in("category_id", catIds);
+      }
     } else {
       // Look up category by slug or name for SEO-friendly URLs
       const { data: cat } = await supabase
@@ -315,9 +352,19 @@ export async function getFilteredProducts(filters: {
     query = query.or(`name.ilike.%${search}%,description.ilike.%${search}%`);
   }
 
-  const { data, error, count } = await query
-    .order("created_at", { ascending: false })
-    .range(from, to);
+  if (sale) {
+    query = query.not("compare_at_price", "is", null).filter("compare_at_price", "gt", "price");
+  }
+
+  if (tag === "new-arrivals") {
+    query = query.order("created_at", { ascending: false });
+  } else if (tag === "best-sellers") {
+    query = query.order("stock", { ascending: false });
+  } else {
+    query = query.order("created_at", { ascending: false });
+  }
+
+  const { data, error, count } = await query.range(from, to);
 
   if (error) throw error;
 

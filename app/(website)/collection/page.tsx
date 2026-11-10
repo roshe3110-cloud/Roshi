@@ -32,6 +32,8 @@ interface Props {
     max?: string;
     page?: string;
     search?: string;
+    sale?: string;
+    tag?: string;
   }>;
 }
 
@@ -76,6 +78,15 @@ const fallbackCollectionPlaceholder = [
   },
   {
     id: "fb-col-5",
+    slug: "silver-simple-keepsake-jewelry-box",
+    name: "ROSHÉ Silver Simple Keepsake Travel Jewelry Box",
+    image: "/categories/jewelry-boxes.svg",
+    price: 3200,
+    oldPrice: 3800,
+    sale: true,
+  },
+  {
+    id: "fb-col-6",
     slug: "botanical-barrier-restoration-cream",
     name: "Botanical Barrier Deep Restoration Moisture Cream",
     image: "/categories/skincare-serums.svg",
@@ -84,13 +95,31 @@ const fallbackCollectionPlaceholder = [
     sale: false,
   },
   {
-    id: "fb-col-6",
+    id: "fb-col-7",
     slug: "roman-numeral-waterproof-cuff-bangle",
     name: "Roman Dial Minimalist Waterproof Cuff Bangle (Gold)",
     image: "/categories/fine-jewelry.svg",
     price: 4200,
     oldPrice: 4950,
     sale: true,
+  },
+  {
+    id: "fb-col-8",
+    slug: "matte-lip-gloss-velvet-rose",
+    name: "Soft Matte Liquid Lip Gloss — Velvet Rose",
+    image: "/categories/lip-eye-care.svg",
+    price: 2450,
+    oldPrice: 2900,
+    sale: true,
+  },
+  {
+    id: "fb-col-9",
+    slug: "precision-waterproof-eyeliner",
+    name: "Precision Jet-Black Waterproof Liquid Eyeliner",
+    image: "/categories/luxury-cosmetics.svg",
+    price: 2100,
+    oldPrice: 2500,
+    sale: false,
   },
 ];
 
@@ -115,6 +144,8 @@ export default async function CollectionPage({ searchParams }: Props) {
   const maxPrice = Number(params.max) || undefined;
   const page = Number(params.page) || 1;
   const search = params.search;
+  const isSale = params.sale === "true";
+  const tag = params.tag;
 
   let filteredData: {
     products: Product[];
@@ -131,6 +162,8 @@ export default async function CollectionPage({ searchParams }: Props) {
       search,
       page,
       limit: PRODUCTS_PER_PAGE,
+      sale: isSale,
+      tag,
     });
   } catch {
     // ignore error in server component context
@@ -146,7 +179,7 @@ export default async function CollectionPage({ searchParams }: Props) {
     sale: p.compare_at_price ? p.compare_at_price > p.price : false,
   }));
 
-  const hasFilter = Boolean(category || search || minPrice || maxPrice);
+  const hasFilter = Boolean(category || search || minPrice || maxPrice || isSale || tag);
   const displayedProducts =
     mappedProducts.length > 0
       ? mappedProducts
@@ -166,6 +199,8 @@ export default async function CollectionPage({ searchParams }: Props) {
     minPrice ? `min=${minPrice}` : "",
     maxPrice ? `max=${maxPrice}` : "",
     search ? `search=${encodeURIComponent(search)}` : "",
+    isSale ? "sale=true" : "",
+    tag ? `tag=${encodeURIComponent(tag)}` : "",
   ]
     .filter(Boolean)
     .join("&");

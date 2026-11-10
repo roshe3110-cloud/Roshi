@@ -9,6 +9,7 @@ import {
   useTransition,
 } from "react";
 import { useCategories } from "@/hooks/useCategories";
+import { ROSHE_ALL_CATEGORIES } from "@/hooks/useNavigationMenu";
 import { Search, X, SlidersHorizontal, Sparkles, RotateCcw } from "lucide-react";
 
 // ─── Debounce helper ──────────────────────────────────────────────────────────
@@ -39,19 +40,68 @@ export default function CollectionFilters() {
   const { data: categories, isLoading: isCategoriesLoading } = useCategories();
   const activeCategory = params.get("category") ?? "";
 
-  const categoryList = useMemo(
-    () =>
-      (categories ?? []).map((cat) => ({
+  const categoryList = useMemo(() => {
+    if (categories && categories.length > 0) {
+      const dbList = categories.map((cat) => ({
         id: cat.id,
         name: cat.name,
         slug: cat.slug,
-      })),
-    [categories],
-  );
+        group:
+          cat.slug?.includes("jewel") ||
+          cat.slug?.includes("ring") ||
+          cat.slug?.includes("necklace") ||
+          cat.slug?.includes("box") ||
+          cat.slug?.includes("earring") ||
+          cat.slug?.includes("bracelet") ||
+          cat.slug?.includes("anklet") ||
+          cat.slug?.includes("hair") ||
+          cat.slug?.includes("chain") ||
+          cat.slug?.includes("silver") ||
+          cat.slug?.includes("gold") ||
+          cat.slug?.includes("set")
+            ? "jewelry"
+            : cat.slug?.includes("skin") ||
+              cat.slug?.includes("cream") ||
+              cat.slug?.includes("serum") ||
+              cat.slug?.includes("fragrance") ||
+              cat.slug?.includes("perfume")
+            ? "beauty"
+            : "makeup",
+      }));
+
+      // Merge with hardcoded to guarantee full coverage
+      const merged = [...dbList];
+      ROSHE_ALL_CATEGORIES.forEach((def) => {
+        if (!merged.some((m) => m.slug === def.slug)) {
+          merged.push({
+            id: def.slug,
+            name: def.title,
+            slug: def.slug,
+            group: def.group,
+          });
+        }
+      });
+      return merged;
+    }
+
+    // Default hardcoded list
+    return ROSHE_ALL_CATEGORIES.map((def) => ({
+      id: def.slug,
+      name: def.title,
+      slug: def.slug,
+      group: def.group,
+    }));
+  }, [categories]);
 
   const activeCategoryName = useMemo(() => {
     if (!activeCategory) return null;
-    const found = categoryList.find((c) => c.id === activeCategory);
+    if (activeCategory === "makeup") return "Makeup & Lipsticks";
+    if (activeCategory === "jewelry") return "Jewelry & Keepsakes";
+    if (activeCategory === "beauty" || activeCategory === "skincare")
+      return "Beauty & Skincare";
+    const found = categoryList.find(
+      (c) => c.id === activeCategory || c.slug === activeCategory,
+    );
     return found ? found.name : "Selected Category";
   }, [activeCategory, categoryList]);
 
@@ -164,33 +214,63 @@ export default function CollectionFilters() {
             <span>All Products</span>
           </button>
 
-          {/* Dynamic Categories */}
-          {isCategoriesLoading && (
-            <div className="flex gap-2 animate-pulse">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="h-8 w-24 rounded-full bg-[#EBD5C5]/50" />
-              ))}
-            </div>
-          )}
+          {/* Quick Main Category: Makeup */}
+          <button
+            type="button"
+            onClick={() => selectCategory("makeup")}
+            className={`shrink-0 inline-flex items-center px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 active:scale-95 shadow-sm ${
+              activeCategory === "makeup"
+                ? "bg-[#704638] text-white border border-[#D4A45E] shadow-md shadow-[#704638]/20"
+                : "bg-white text-[#704638] border border-[#D4A45E]/30 hover:border-[#D4A45E] hover:bg-[#F4DCD8]/40"
+            }`}
+          >
+            <span>💄 All Makeup</span>
+          </button>
 
-          {!isCategoriesLoading &&
-            categoryList.map((cat) => {
-              const isActive = activeCategory === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  type="button"
-                  onClick={() => selectCategory(cat.id)}
-                  className={`shrink-0 inline-flex items-center px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 active:scale-95 shadow-sm ${
-                    isActive
-                      ? "bg-[#704638] text-white border border-[#D4A45E] shadow-md shadow-[#704638]/20"
-                      : "bg-white text-[#704638] border border-[#D4A45E]/30 hover:border-[#D4A45E] hover:bg-[#F4DCD8]/40"
-                  }`}
-                >
-                  <span>{cat.name}</span>
-                </button>
-              );
-            })}
+          {/* Quick Main Category: Jewelry */}
+          <button
+            type="button"
+            onClick={() => selectCategory("jewelry")}
+            className={`shrink-0 inline-flex items-center px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 active:scale-95 shadow-sm ${
+              activeCategory === "jewelry"
+                ? "bg-[#704638] text-white border border-[#D4A45E] shadow-md shadow-[#704638]/20"
+                : "bg-white text-[#704638] border border-[#D4A45E]/30 hover:border-[#D4A45E] hover:bg-[#F4DCD8]/40"
+            }`}
+          >
+            <span>👑 All Jewelry</span>
+          </button>
+
+          {/* Quick Main Category: Beauty & Skincare */}
+          <button
+            type="button"
+            onClick={() => selectCategory("beauty")}
+            className={`shrink-0 inline-flex items-center px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 active:scale-95 shadow-sm ${
+              activeCategory === "beauty" || activeCategory === "skincare"
+                ? "bg-[#704638] text-white border border-[#D4A45E] shadow-md shadow-[#704638]/20"
+                : "bg-white text-[#704638] border border-[#D4A45E]/30 hover:border-[#D4A45E] hover:bg-[#F4DCD8]/40"
+            }`}
+          >
+            <span>✨ Beauty & Skincare</span>
+          </button>
+
+          {/* Specific Subcategory Pills */}
+          {categoryList.map((cat) => {
+            const isActive = activeCategory === cat.id || activeCategory === cat.slug;
+            return (
+              <button
+                key={cat.id || cat.slug}
+                type="button"
+                onClick={() => selectCategory(cat.slug || cat.id)}
+                className={`shrink-0 inline-flex items-center px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 active:scale-95 shadow-sm ${
+                  isActive
+                    ? "bg-[#704638] text-white border border-[#D4A45E] shadow-md shadow-[#704638]/20"
+                    : "bg-white text-[#704638] border border-[#D4A45E]/30 hover:border-[#D4A45E] hover:bg-[#F4DCD8]/40"
+                }`}
+              >
+                <span>{cat.name}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -203,7 +283,7 @@ export default function CollectionFilters() {
             id="filter-search"
             type="search"
             value={searchValue}
-            placeholder="Search luxury skincare, lipsticks, serums…"
+            placeholder="Search lipsticks, eyeliners, waterproof jewelry, boxes…"
             onChange={handleSearch}
             className="w-full rounded-full border border-[#D4A45E]/30 bg-[#F9F4EF]/60 py-2 pl-9 pr-8 text-xs sm:text-sm text-[#704638] placeholder-[#8C5E50]/60 outline-none transition-all focus:border-[#D4A45E] focus:bg-white focus:ring-2 focus:ring-[#D4A45E]/20"
           />

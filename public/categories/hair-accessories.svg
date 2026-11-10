@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F4EF" />
+      <stop offset="50%" stop-color="#FAF3EB" />
+      <stop offset="100%" stop-color="#EBD5C5" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D194" />
+      <stop offset="50%" stop-color="#D4A45E" />
+      <stop offset="100%" stop-color="#9E7333" />
+    </linearGradient>
+    <linearGradient id="sparkle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F4DCD8" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg)" />
+  <circle cx="300" cy="340" r="145" fill="#FFFFFF" stroke="#D4A45E" stroke-width="2.5" opacity="0.95" />
+  
+  <!-- Outer Gold Band Ring Silhouette -->
+  <circle cx="300" cy="350" r="75" fill="none" stroke="url(#gold)" stroke-width="16" />
+  <circle cx="300" cy="350" r="62" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.5" />
+
+  <!-- Solitaire Brilliant Diamond Crown / Prong Setting -->
+  <path d="M275 275 L325 275 L340 295 L300 340 L260 295 Z" fill="url(#sparkle)" stroke="url(#gold)" stroke-width="3" />
+  <polygon points="300,275 340,295 300,340 260,295" fill="url(#gold)" opacity="0.25" />
+  <line x1="260" y1="295" x2="340" y2="295" stroke="url(#gold)" stroke-width="2" />
+  <line x1="300" y1="275" x2="300" y2="340" stroke="url(#gold)" stroke-width="1.5" />
+
+  <!-- Sparkling Star Accents -->
+  <path d="M200 230 Q200 250 180 250 Q200 250 200 270 Q200 250 220 250 Q200 250 200 230 Z" fill="#D4A45E" opacity="0.8" />
+  <path d="M400 260 Q400 275 385 275 Q400 275 400 290 Q400 275 415 275 Q400 275 400 260 Z" fill="#D4A45E" opacity="0.8" />
+  <circle cx="215" cy="420" r="4" fill="#D4A45E" opacity="0.6" />
+  <circle cx="390" cy="410" r="4" fill="#D4A45E" opacity="0.6" />
+
+  <!-- Typography -->
+  <text x="300" y="550" font-family="'Outfit', sans-serif" font-size="28" font-weight="800" fill="#704638" text-anchor="middle" letter-spacing="3">FINE &amp; WATERPROOF JEWELRY</text>
+  <text x="300" y="585" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="600" fill="#D4A45E" text-anchor="middle" letter-spacing="2">18K GOLD PLATED · ANTI-TARNISH</text>
+</svg>
+
