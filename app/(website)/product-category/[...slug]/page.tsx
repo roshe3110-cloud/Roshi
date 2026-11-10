@@ -35,8 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const categorySlug = slug.join("/");
 
   return {
-    title: `${title} - Collection | The 960 Club`,
-    description: `Shop ${title} at The 960 Club. Explore premium waterproof stainless steel jewelry and accessories.`,
+    title: `${title} - Collection | ROSHÉ BEAUTY & JEWELRY`,
+    description: `Shop ${title} at ROSHÉ BEAUTY & JEWELRY. Explore luxury skincare, radiant cosmetics, and 18K gold-plated waterproof jewelry.`,
     alternates: {
       canonical: `/product-category/${categorySlug}`,
     },

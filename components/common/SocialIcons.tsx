@@ -4,16 +4,16 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const STORE_CONTACT = {
-  brandName: "ROSHÉ BEAUTY",
-  phone: "+92 317 4880517",
-  phoneFormatted: "+92 317 4880517",
-  whatsappNumber: "+92 317 4880517",
-  whatsappUrl: "https://wa.me/923174880517",
-  address: "Lahore Pakistan",
+  brandName: "ROSHÉ BEAUTY & JEWELRY",
+  phone: "+92 347 1060653",
+  phoneFormatted: "+92 347 1060653",
+  whatsappNumber: "923471060653",
+  whatsappUrl: "https://wa.me/923471060653",
+  address: "Lahore, Pakistan",
   city: "Lahore",
   instagram: "https://www.instagram.com/rosh.e21?xtok=MTR3bXRjNWhleXlwaw==",
   facebook: "https://www.facebook.com/share/1Jb7p7Vi9g/",
-  email: "[EMAIL_ADDRESS]",
+  email: "Roshe3110@gmail.com",
   tiktok: "https://www.instagram.com/rosh.e21?xtok=MTR3bXRjNWhleXlwaw==",
 };
 

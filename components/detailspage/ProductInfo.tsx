@@ -54,7 +54,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
 
           <span className="inline-flex items-center gap-1 rounded-full border border-[#D4A45E]/30 bg-[#F4DCD8]/60 px-3 py-1 text-xs font-medium text-[#704638]">
             <Sparkles className="w-3 h-3 text-[#D4A45E]" />
-            Dermatologically Tested
+            100% Authentic Quality
           </span>
 
           {discount && (
@@ -88,7 +88,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
           </span>
           <span className="text-[#8C5E50]/40">·</span>
           <span className="text-[#8C5E50]">
-            ({product.reviews || 24} verified beauty reviews)
+            ({product.reviews || 24} verified customer reviews)
           </span>
         </div>
       </div>
@@ -113,7 +113,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       {/* Description */}
       <div className="space-y-2">
         <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#8C5E50]">
-          Beauty Overview &amp; Key Ingredients
+          Product Overview &amp; Details
         </h3>
 
         <p className="text-sm leading-relaxed text-[#704638]">
@@ -142,7 +142,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
 
           <a
             href={`https://wa.me/${STORE_CONTACT.whatsappNumber}?text=${encodeURIComponent(
-              `Hi ROSHÉ BEAUTY! I would like personal beauty recommendations & details for: ${product.name} (Qty: ${quantity})`
+              `Hi ROSHÉ BEAUTY & JEWELRY! I would like personal advice & details for: ${product.name} (Qty: ${quantity})`
             )}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -169,7 +169,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
         <Feature
           icon={<ShieldCheck className="w-5 h-5 text-[#D4A45E]" />}
           title="100% Authentic"
-          text="Pure, fresh & dermatologist-inspired beauty formulations"
+          text="Pure skincare formulas & 18K gold waterproof craftsmanship"
         />
 
         <Feature
@@ -180,8 +180,8 @@ export default function ProductInfo({ product }: ProductInfoProps) {
 
         <Feature
           icon={<Droplets className="w-5 h-5 text-[#D4A45E]" />}
-          title="Beauty Support"
-          text={`Direct WhatsApp routine advice at ${STORE_CONTACT.phoneFormatted}`}
+          title="VIP Concierge"
+          text={`Routine, shade & jewelry sizing support at ${STORE_CONTACT.phoneFormatted}`}
         />
       </div>
     </div>

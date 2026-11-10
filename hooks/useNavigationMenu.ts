@@ -3,7 +3,7 @@ import { useCategories } from "./useCategories";
 import type { MenuItem } from "@/components/headers/types";
 import { getCategorySlug } from "@/lib/utils";
 
-// Stable SEO-friendly defaults for ROSHÉ BEAUTY
+// Stable SEO-friendly defaults for ROSHÉ BEAUTY & JEWELRY
 const DEFAULT_CATEGORIES: { title: string; slug: string }[] = [
   {
     title: "Skincare & Serums",
@@ -12,6 +12,10 @@ const DEFAULT_CATEGORIES: { title: string; slug: string }[] = [
   {
     title: "Luxury Cosmetics",
     slug: "luxury-cosmetics",
+  },
+  {
+    title: "Fine & Waterproof Jewelry",
+    slug: "fine-jewelry",
   },
   {
     title: "Lip & Eye Care",
@@ -29,7 +33,7 @@ export function useNavigationMenu(): MenuItem[] {
   return useMemo(() => {
     const shopChildren: MenuItem[] = [
       {
-        title: "All Beauty Products",
+        title: "All Products (Beauty & Jewelry)",
         href: "/collection",
       },
     ];
@@ -61,7 +65,16 @@ export function useNavigationMenu(): MenuItem[] {
       (c) =>
         c.slug?.includes("cosmetic") ||
         c.name?.toLowerCase().includes("cosmetic") ||
-        c.slug?.includes("makeup"),
+        c.slug?.includes("makeup") ||
+        c.name?.toLowerCase().includes("lip"),
+    );
+
+    const jewelryCat = categories?.find(
+      (c) =>
+        c.slug?.includes("jewel") ||
+        c.name?.toLowerCase().includes("jewel") ||
+        c.slug?.includes("ring") ||
+        c.name?.toLowerCase().includes("necklace"),
     );
 
     const skincareHref = skincareCat
@@ -71,6 +84,10 @@ export function useNavigationMenu(): MenuItem[] {
     const cosmeticsHref = cosmeticsCat
       ? `/collection?category=${getCategorySlug(cosmeticsCat)}`
       : "/collection?category=luxury-cosmetics";
+
+    const jewelryHref = jewelryCat
+      ? `/collection?category=${getCategorySlug(jewelryCat)}`
+      : "/collection?category=fine-jewelry";
 
     return [
       {
@@ -92,6 +109,10 @@ export function useNavigationMenu(): MenuItem[] {
       {
         title: "Cosmetics",
         href: cosmeticsHref,
+      },
+      {
+        title: "Jewelry",
+        href: jewelryHref,
       },
       {
         title: "About Us",

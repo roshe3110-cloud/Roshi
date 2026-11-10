@@ -31,7 +31,7 @@ import {
   GlowingSocialButton,
 } from "@/components/common/SocialIcons";
 
-const STORE_WHATSAPP_NUMBER = STORE_CONTACT.whatsappNumber; // 923139235476
+const STORE_WHATSAPP_NUMBER = STORE_CONTACT.whatsappNumber; // 923471060653
 
 function getFormattedDate(): string {
   return new Date().toLocaleDateString("en-US", {
@@ -191,7 +191,7 @@ export default function CheckoutClient() {
         )
         .join("\n");
 
-      const message = `🛍️ *NEW ORDER FINALIZED* - ROSHÉ
+      const message = `🛍️ *NEW ORDER FINALIZED* - ROSHÉ BEAUTY & JEWELRY
 Order ID: #${savedOrder.order_number}
 Date: ${formattedDate}
 ------------------------------------------
@@ -212,7 +212,7 @@ ${itemLines}
 ------------------------------------------
 ⚠️ *PAYMENT SLIP REQUIRED FOR DISPATCH:*
 Please send your payment slip / transfer screenshot here on WhatsApp.
-After finalizing the payment slip verification, we will dispatch your beauty parcel immediately to your address:
+After finalizing the payment slip verification, we will dispatch your order immediately to your address:
 📍 ${address}, ${city}, ${state} (${postcode})
 
 📝 *Order Notes:* ${notes}
@@ -223,7 +223,7 @@ After finalizing the payment slip verification, we will dispatch your beauty par
 📘 *Facebook:* ${STORE_CONTACT.facebook}
 📧 *Email:* ${STORE_CONTACT.email}
 
-Thank you for shopping with ROSHÉ BEAUTY!`;
+Thank you for shopping with ROSHÉ BEAUTY & JEWELRY!`;
 
       const encodedMessage = encodeURIComponent(message);
       const url = `https://wa.me/${STORE_WHATSAPP_NUMBER}?text=${encodedMessage}`;

@@ -23,25 +23,28 @@ import type { Banner } from "@/services/banner.service";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "ROSHÉ BEAUTY | Luxury Skincare, Cosmetics & Radiant Beauty Essentials",
+  title: "ROSHÉ BEAUTY & JEWELRY | Luxury Skincare, Cosmetics & Fine Jewelry",
   description:
-    "Shop premium luxury skincare, velvet matte cosmetics, rejuvenating face serums, and radiant beauty essentials at ROSHÉ BEAUTY. Authentic products with nationwide delivery.",
+    "Shop premium luxury skincare, velvet matte cosmetics, and handcrafted 18K gold-plated waterproof fine jewelry at ROSHÉ. Authentic products with nationwide delivery across Pakistan.",
   alternates: { canonical: "/" },
   keywords: [
+    "ROSHÉ BEAUTY & JEWELRY",
     "ROSHÉ BEAUTY",
     "Roshe Beauty",
     "Luxury Skincare Pakistan",
     "Cosmetics Pakistan",
+    "Fine Jewelry Pakistan",
+    "Waterproof Jewelry",
+    "18K Gold Plated Jewelry",
+    "Anti Tarnish Jewelry",
     "Face Serums",
     "Velvet Matte Lipstick",
-    "Glow Palette",
-    "Dermatology Tested Skincare",
   ],
   openGraph: {
     url: "/",
-    title: "ROSHÉ BEAUTY | Luxury Skincare, Cosmetics & Radiant Beauty Essentials",
-    description: "Shop premium luxury skincare, velvet cosmetics, and radiant beauty essentials.",
-    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "ROSHÉ BEAUTY" }],
+    title: "ROSHÉ BEAUTY & JEWELRY | Luxury Skincare, Cosmetics & Fine Jewelry",
+    description: "Shop premium luxury skincare, velvet cosmetics, and 18K gold-plated fine jewelry.",
+    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "ROSHÉ BEAUTY & JEWELRY" }],
   },
 };
 
@@ -66,6 +69,24 @@ const fallbackDefaultProducts = [
   },
   {
     id: "fallback-prod-3",
+    slug: "waterproof-18k-gold-herringbone-necklace",
+    name: "18K Gold Plated Waterproof Herringbone Chain Necklace",
+    price: 3650,
+    oldPrice: 4200,
+    sale: true,
+    image: "/categories/fine-jewelry.svg",
+  },
+  {
+    id: "fallback-prod-4",
+    slug: "solitaire-zirconia-eternity-ring",
+    name: "Solitaire Zirconia Sparkle Eternity Ring — 18K Gold PVD",
+    price: 2450,
+    oldPrice: 2950,
+    sale: false,
+    image: "/categories/fine-jewelry.svg",
+  },
+  {
+    id: "fallback-prod-5",
     slug: "botanical-barrier-restoration-cream",
     name: "Botanical Barrier Deep Restoration Moisture Cream",
     price: 3800,
@@ -74,13 +95,13 @@ const fallbackDefaultProducts = [
     image: "/categories/skincare-serums.svg",
   },
   {
-    id: "fallback-prod-4",
-    slug: "illuminating-pearl-highlighter-palette",
-    name: "Illuminating Pearl Highlighting & Contour Glow Palette",
-    price: 4200,
-    oldPrice: 4900,
+    id: "fallback-prod-6",
+    slug: "crystal-roman-bangle-bracelet",
+    name: "Anti-Tarnish Roman Dial Crystal Bangle Bracelet",
+    price: 3950,
+    oldPrice: 4800,
     sale: true,
-    image: "/categories/luxury-cosmetics.svg",
+    image: "/categories/fine-jewelry.svg",
   },
 ];
 
@@ -116,6 +137,12 @@ export default async function Home() {
     }));
   } else {
     showcaseItems = [
+      {
+        id: "fine-jewelry",
+        title: "Fine & Waterproof Jewelry",
+        image: "/categories/fine-jewelry.svg",
+        href: "/collection?category=fine-jewelry",
+      },
       {
         id: "skincare-serums",
         title: "Skincare & Serums",
@@ -172,12 +199,12 @@ export default async function Home() {
       <Marquee
         speed={20}
         items={[
-          "🌸 Luxury Skincare & Radiant Skin Formulations",
-          "💄 Velvet Matte Pigments & Exquisite Cosmetics",
-          "✨ 100% Authentic Quality & Tested Formulations",
-          "🌿 Nourishing Botanicals, Vitamin C & Hyaluronic Elixirs",
-          "🚚 Free Nationwide Delivery Across Pakistan",
-          "💬 Personalized WhatsApp Consultations & Rapid Dispatch",
+          "✨ ROSHÉ BEAUTY & JEWELRY — Luxury Skincare, Cosmetics & Waterproof Jewels",
+          "👑 18K Gold-Plated & Anti-Tarnish Waterproof Fine Jewelry",
+          "🌸 Radiance Serums, Velvet Lipsticks & Nourishing Botanicals",
+          "💎 Hypoallergenic 316L Stainless Steel Crafted for Everyday Elegance",
+          "🚚 Free Express Nationwide Delivery Across Pakistan",
+          "💬 WhatsApp VIP Concierge: +92 347 1060653",
         ]}
       />
 

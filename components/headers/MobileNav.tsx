@@ -113,9 +113,14 @@ export default function MobileNav({ open, onClose }: MobileNavProps) {
           >
             {/* Header */}
             <div className="flex items-center justify-between border-b border-[#F4DCD8] px-5 py-4 bg-white/70">
-              <span className="font-heading text-lg font-extrabold tracking-wider text-[#704638]">
-                ROSHÉ 
-              </span>
+              <div className="flex flex-col">
+                <span className="font-heading text-lg font-extrabold tracking-wider text-[#704638]">
+                  ROSHÉ 
+                </span>
+                <span className="text-[10px] font-bold tracking-widest text-[#D4A45E] uppercase -mt-0.5">
+                  Beauty &amp; Jewelry
+                </span>
+              </div>
 
               <button
                 onClick={onClose}
@@ -191,7 +196,7 @@ export default function MobileNav({ open, onClose }: MobileNavProps) {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search skincare, serums, lipsticks…"
+                  placeholder="Search beauty, cosmetics, fine jewelry…"
                   className="flex-1 bg-transparent text-sm text-[#704638] outline-none placeholder:text-[#8C5E50]/60"
                 />
               </div>

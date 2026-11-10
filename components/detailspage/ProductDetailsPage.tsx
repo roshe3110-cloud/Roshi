@@ -81,27 +81,27 @@ export default function ProductDetailsPage({
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#D4A45E]/40 bg-[#D4A45E]/20 px-3.5 py-1 text-xs font-mono font-semibold uppercase tracking-wider text-[#D4A45E] mb-3">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>ROSHÉ Beauty Advisory</span>
+              <span>ROSHÉ VIP Advisory</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white font-heading">
-              Need Shade Guidance or Skincare Routine Advice?
+              Need Sizing, Shade Guidance, or Product Advice?
             </h3>
             <p className="mt-2 text-xs sm:text-sm text-[#F4DCD8] leading-relaxed">
-              Our dedicated ROSHÉ BEAUTY specialists provide customized regimen recommendations, skin type analysis, and live shade swatch matching on WhatsApp.
+              Our dedicated ROSHÉ BEAUTY &amp; JEWELRY specialists provide customized regimen recommendations, jewelry sizing guidance, and live shade swatch matching on WhatsApp.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
             <a
               href={`https://wa.me/${STORE_CONTACT.whatsappNumber}?text=${encodeURIComponent(
-                `Hi ROSHÉ BEAUTY! I would like to consult a beauty specialist regarding ${product.name} and get shade matching guidance.`
+                `Hi ROSHÉ BEAUTY & JEWELRY! I would like to consult an advisor regarding: ${product.name}.`
               )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#D4A45E] to-[#B8893E] px-6 py-3 text-xs sm:text-sm font-bold text-black shadow-lg shadow-[#D4A45E]/20 transition hover:brightness-110 active:scale-95"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>Consult Beauty Advisor</span>
+              <span>Consult Advisor on WhatsApp</span>
             </a>
 
             <div className="flex items-center gap-2 text-xs text-[#F4DCD8] border border-white/20 rounded-xl px-4 py-3 bg-white/10">

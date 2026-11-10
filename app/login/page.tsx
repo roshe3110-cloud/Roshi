@@ -434,7 +434,7 @@ export default function AdminLoginPage() {
         </div>
 
         <p className="text-center text-[#444] text-xs mt-6">
-          © {new Date().getFullYear()} ROSHÉ BEAUTY · Admin Portal (Strict 3
+          © {new Date().getFullYear()} ROSHÉ BEAUTY &amp; JEWELRY · Admin Portal (Strict 3
           Attempts Protection)
         </p>
       </div>

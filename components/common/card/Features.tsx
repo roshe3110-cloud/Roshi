@@ -34,7 +34,7 @@ export default function Features() {
           </h2>
 
           <p className="mt-3 text-sm sm:text-base text-[#8C5E50] leading-relaxed">
-            Why skincare connoisseurs and beauty enthusiasts across Pakistan trust ROSHÉ BEAUTY for their everyday luminous glow.
+            Why skincare connoisseurs and jewelry lovers across Pakistan trust ROSHÉ BEAUTY &amp; JEWELRY for their everyday radiance and timeless elegance.
           </p>
         </div>
 
@@ -158,7 +158,7 @@ export default function Features() {
           </div>
         </motion.div>
 
-        {/* ── Bento 3: Clean Clinical & Gentle Formula (Span 5 cols) - Silk Blush ── */}
+        {/* ── Bento 3: Fine & Waterproof Jewelry (Span 5 cols) - Silk Blush ── */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -167,35 +167,35 @@ export default function Features() {
           className="md:col-span-5 relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#F4DCD8] via-[#F8E8E5] to-[#EBD5C5] p-8 sm:p-10 border border-[#D4A45E]/40 shadow-lg flex flex-col justify-between group hover:border-[#D4A45E] hover:shadow-2xl hover:shadow-[#D4A45E]/15 transition-all duration-500"
         >
           <div className="absolute right-6 top-6 font-mono text-[10px] text-[#704638] uppercase tracking-widest bg-white/70 px-3 py-1 rounded-full border border-[#D4A45E]/30">
-            ETHICAL // CLEAN
+            JEWELRY // WATERPROOF
           </div>
 
           <div>
-            <div className="w-14 h-14 rounded-2xl bg-white text-[#704638] flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300 shadow-sm border border-[#D4A45E]/30">
-              <ShieldCheck className="w-7 h-7 text-[#704638]" />
+            <div className="w-14 h-14 rounded-2xl bg-white text-[#D4A45E] flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300 shadow-sm border border-[#D4A45E]/30">
+              <Sparkles className="w-7 h-7 text-[#D4A45E]" />
             </div>
 
             <div className="inline-flex items-center gap-1.5 text-xs font-mono text-[#704638] mb-2 uppercase tracking-wider font-bold">
-              <span>Pure &amp; Dermatologically Gentle</span>
+              <span>18K Gold Plated &amp; Anti-Tarnish</span>
             </div>
 
             <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-[#704638] mb-3 leading-snug">
-              Gentle on Sensitive Skin Types
+              Waterproof Fine Jewelry
             </h3>
 
             <p className="text-xs sm:text-sm text-[#704638]/85 leading-relaxed mb-6">
-              Formulated without harsh parabens, sulfates, synthetic irritants, or phthalates. Thoughtfully balanced to support your natural skin barrier and reveal healthy radiance.
+              Handcrafted with surgical 316L stainless steel and real 18K gold PVD coating. Sweat-proof, perfume-safe, and hypoallergenic pieces designed to never tarnish or lose their radiant shine.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5 pt-6 border-t border-[#704638]/15">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white text-[#704638] border border-[#D4A45E]/30 shadow-xs">
-              <Heart className="w-3 h-3 text-rose-500 fill-rose-500/20" />
-              100% Cruelty-Free
+              <ShieldCheck className="w-3 h-3 text-[#D4A45E]" />
+              100% Anti-Tarnish
             </span>
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white text-[#704638] border border-[#D4A45E]/30 shadow-xs">
               <CheckCircle2 className="w-3 h-3 text-[#D4A45E]" />
-              Paraben-Free
+              Waterproof &amp; Hypoallergenic
             </span>
           </div>
         </motion.div>
@@ -219,20 +219,20 @@ export default function Features() {
               </div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#25D366]/15 border border-[#25D366]/30 text-[#128C7E] text-xs font-bold">
                 <span className="h-2 w-2 rounded-full bg-[#25D366] animate-ping" />
-                <span>Live WhatsApp Shade Concierge</span>
+                <span>WhatsApp Care: +92 347 1060653</span>
               </div>
             </div>
 
             <div className="inline-flex items-center gap-1.5 text-xs font-mono text-[#704638] mb-2 uppercase tracking-wider font-bold">
-              <span>Personalized Beauty Advisory &amp; Safe Nationwide Delivery</span>
+              <span>Personalized Beauty &amp; Jewelry Advisory · Fast Nationwide Delivery</span>
             </div>
 
             <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#704638] mb-3 leading-snug">
-              WhatsApp Shade Matching &amp; Luxury Unboxing
+              WhatsApp Concierge &amp; Luxury Unboxing
             </h3>
 
             <p className="text-xs sm:text-sm text-[#8C5E50] leading-relaxed max-w-xl mb-6">
-              Unsure which serum or lipstick matches your undertone? Chat directly with our beauty advisors on WhatsApp. Every ROSHÉ package arrives in sealed luxury presentation packaging across Pakistan.
+              Unsure which serum, lipstick shade, or jewelry size fits you best? Chat directly with our beauty &amp; jewelry stylists on WhatsApp (+92 347 1060653). Every ROSHÉ package arrives in sealed luxury gift packaging across Pakistan.
             </p>
 
             <Link
@@ -240,7 +240,7 @@ export default function Features() {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#704638] text-white hover:bg-gradient-to-r hover:from-[#D4A45E] hover:to-[#B8893E] hover:text-[#704638] text-xs font-bold transition-all duration-300 shadow-md mb-6 w-fit"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>Connect With A Beauty Advisor</span>
+              <span>Connect on WhatsApp (+92 347 1060653)</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

@@ -130,7 +130,7 @@ export default function Header() {
                 <Image
                   unoptimized
                   src="/logo.png"
-                  alt="ROSHÉ BEAUTY Logo"
+                  alt="ROSHÉ BEAUTY &amp; JEWELRY Logo"
                   width={80}
                   height={80}
                   priority
@@ -173,7 +173,7 @@ export default function Header() {
                       type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="Search skincare, serums, cosmetics…"
+                      placeholder="Search skincare, cosmetics, jewelry…"
                       className="w-full rounded-full border border-[#D4A45E]/40 bg-white px-4 py-2 text-xs sm:text-sm text-[#704638] outline-none ring-0 focus:border-[#704638] transition-colors placeholder:text-[#8C5E50]/60 shadow-sm"
                     />
                   </motion.form>

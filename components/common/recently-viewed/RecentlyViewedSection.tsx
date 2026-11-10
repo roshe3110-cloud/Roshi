@@ -42,10 +42,10 @@ export default function RecentlyViewedSection() {
           </div>
           <div>
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#704638] font-heading">
-              Recently Viewed Beauty Products
+              Recently Viewed Items
             </h2>
             <p className="text-xs text-[#8C5E50]">
-              Quick access to products and skincare items you recently explored
+              Quick access to beauty and fine jewelry items you recently explored
             </p>
           </div>
         </div>

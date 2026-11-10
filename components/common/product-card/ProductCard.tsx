@@ -53,7 +53,7 @@ export default function ProductCard({
         <Link
           href={`/collection/${product.slug}`}
           className="absolute right-3 top-3 z-10 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-white/95 text-[#704638] backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-200 hover:bg-[#704638] hover:text-white shadow-sm border border-[#D4A45E]/30"
-          aria-label="View beauty product details"
+          aria-label="View product details"
         >
           <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
         </Link>
@@ -71,7 +71,7 @@ export default function ProductCard({
 
           <Image
             src={imgSrc}
-            alt={product.name || "ROSHÉ BEAUTY product"}
+            alt={product.name || "ROSHÉ BEAUTY & JEWELRY product"}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className={`object-cover transition-all duration-500 ease-out group-hover:scale-105 ${
@@ -91,7 +91,7 @@ export default function ProductCard({
       <div className="flex flex-1 flex-col justify-between p-3.5 sm:p-4 bg-white">
         <div>
           <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-[#8C5E50] mb-1.5 uppercase tracking-wider">
-            <span>Beauty // Radiance</span>
+            <span>ROSHÉ // LUXE</span>
             <span className="text-[#704638] font-semibold flex items-center gap-1">
               <span className="h-1.5 w-1.5 rounded-full bg-[#D4A45E] animate-pulse" />
               In Stock

@@ -10,25 +10,29 @@ import {
 
 const solutionLinks = [
   {
-    label: "Skincare & Serums",
+    label: "Skincare & Radiant Serums",
     href: "/collection?category=skincare-serums",
   },
   {
-    label: "Luxury Cosmetics",
+    label: "Velvet Matte Cosmetics",
     href: "/collection?category=luxury-cosmetics",
   },
   {
-    label: "Lip & Eye Care",
+    label: "Fine & Waterproof Jewelry",
+    href: "/collection?category=fine-jewelry",
+  },
+  {
+    label: "Lip & Eye Beauty Care",
     href: "/collection?category=lip-eye-care",
   },
   {
-    label: "Fragrance & Glow",
+    label: "Fragrance & Body Glow",
     href: "/collection?category=fragrance-glow",
   },
 ];
 
 const companyLinks = [
-  { label: "About ROSHÉ BEAUTY", href: "/about" },
+  { label: "About ROSHÉ", href: "/about" },
   { label: "Contact & Support", href: "/contact" },
   { label: "Shipping Policy", href: "/shipping-policy" },
   { label: "Privacy Policy", href: "/privacy-policy" },
@@ -47,7 +51,7 @@ export default function Footer() {
               <div className="bg-white rounded-2xl flex items-center justify-center p-1.5 border border-[#D4A45E]/40 shadow-sm">
                 <Image
                   src="/logo.png"
-                  alt="ROSHÉ BEAUTY Logo"
+                  alt="ROSHÉ BEAUTY &amp; JEWELRY Logo"
                   width={60}
                   height={60}
                   className="object-contain"
@@ -63,7 +67,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-xs text-[#F4DCD8] leading-relaxed mb-4">
-              Discover pure elegance, glowing skin, and radiant self-confidence with ROSHÉ BEAUTY. Delivering authentic, dermatologist-inspired formulations and velvet-finish cosmetics across Pakistan.
+              Discover pure elegance, glowing skin, and radiant self-confidence with ROSHÉ BEAUTY &amp; JEWELRY. Delivering authentic dermatologist-inspired skincare, velvet cosmetics, and timeless 18K gold-plated waterproof jewelry across Pakistan.
             </p>
             <div className="flex items-center gap-2 text-xs text-[#D4A45E] mb-5 font-semibold">
               <Sparkles className="w-4 h-4" />
@@ -86,7 +90,7 @@ export default function Footer() {
           {/* Solutions & Product Lines */}
           <div>
             <h3 className="mb-4 text-xs font-bold tracking-widest text-[#D4A45E] uppercase">
-              BEAUTY ESSENTIALS
+              BEAUTY &amp; JEWELRY
             </h3>
             <ul className="space-y-2.5">
               {solutionLinks.map((link) => (
@@ -170,10 +174,10 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#D4A45E]/30 pt-8 text-xs text-[#F4DCD8]/80 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} ROSHÉ BEAUTY. All rights reserved.
+            © {new Date().getFullYear()} ROSHÉ BEAUTY &amp; JEWELRY. All rights reserved.
           </p>
           <p className="text-[11px] text-[#F4DCD8]/70">
-            {STORE_CONTACT.address} · {STORE_CONTACT.phone}
+            {STORE_CONTACT.address} · {STORE_CONTACT.phoneFormatted}
           </p>
         </div>
       </div>

@@ -5,9 +5,9 @@ import CartDrawerClient from "./CartDrawerClient";
 import FlowerBackground from "@/components/common/flower-animation/FlowerBackground";
 
 const announcements = [
-  { id: "1", text: "✨ Free Delivery Across Pakistan on All Beauty Orders" },
-  { id: "2", text: "🌸 100% Authentic Luxury Skincare & Cosmetics" },
-  { id: "3", text: "💬 Personalized Beauty Advice & Fast WhatsApp Dispatch" },
+  { id: "1", text: "✨ Free Delivery Across Pakistan on All Beauty & Jewelry Orders" },
+  { id: "2", text: "💎 100% Authentic Luxury Cosmetics & 18K Gold Plated Jewelry" },
+  { id: "3", text: "💬 WhatsApp Orders & Consultations: +92 347 1060653" },
 ];
 
 export default function WebsiteLayout({

@@ -18,17 +18,17 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Terms of Service | ROSHÉ BEAUTY & JEWELRY",
   description:
-    "Read ROSHÉ BEAUTY Terms of Service covering website usage, purchases, policies, and customer responsibilities.",
+    "Read ROSHÉ BEAUTY & JEWELRY Terms of Service covering website usage, purchases, policies, and customer responsibilities.",
   alternates: {
     canonical: "/terms-of-service",
   },
   openGraph: {
     url: "/terms-of-service",
-    title: "Terms of Service | ROSHÉ BEAUTY",
+    title: "Terms of Service | ROSHÉ BEAUTY & JEWELRY",
     description:
-      "Terms and conditions for using ROSHÉ BEAUTY website and services.",
+      "Terms and conditions for using ROSHÉ BEAUTY & JEWELRY website and services.",
   },
 };
 
@@ -39,7 +39,7 @@ const sections = [
     content: (
       <>
         <p>
-          By using ROSHÉ BEAUTY website, you confirm that you are at least 18
+          By using ROSHÉ BEAUTY &amp; JEWELRY website, you confirm that you are at least 18
           years old or accessing the website with permission from a parent or
           legal guardian.
         </p>
@@ -125,7 +125,7 @@ const sections = [
     title: "Third-Party Links",
     content: (
       <p>
-        Our website may contain links to external websites. ROSHÉ BEAUTY is not
+        Our website may contain links to external websites. ROSHÉ BEAUTY &amp; JEWELRY is not
         responsible for third-party content, services, or privacy practices.
         Please review their policies before using external websites.
       </p>
@@ -199,7 +199,7 @@ const sections = [
       <p>
         We do not guarantee that our website will always be error-free or
         available without interruption. You use our website and products at your
-        own risk. ROSHÉ BEAUTY is not responsible for indirect losses or damages.
+        own risk. ROSHÉ BEAUTY &amp; JEWELRY is not responsible for indirect losses or damages.
       </p>
     ),
   },
@@ -233,7 +233,7 @@ export default function TermsPage() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-lg text-neutral-500 leading-relaxed">
-          Please read these terms carefully before using ROSHÉ BEAUTY website or
+          Please read these terms carefully before using ROSHÉ BEAUTY &amp; JEWELRY website or
           purchasing our products.
         </p>
       </section>
@@ -242,7 +242,7 @@ export default function TermsPage() {
       <section className="mb-20">
         <div className="bg-neutral-50 rounded-3xl border border-neutral-100 p-8">
           <p className="text-neutral-500 leading-relaxed">
-            This website is operated by ROSHÉ BEAUTY. By visiting our website or
+            This website is operated by ROSHÉ BEAUTY &amp; JEWELRY. By visiting our website or
             placing an order, you agree to follow these Terms of Service.
           </p>
         </div>

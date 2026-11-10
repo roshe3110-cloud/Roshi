@@ -106,7 +106,7 @@ export default function PopupModal() {
             <Sparkles className="w-3.5 h-3.5" />
             <span>
               {popup.popup_type === "discount"
-                ? "Special Beauty Offer"
+                ? "Special Beauty & Jewelry Offer"
                 : popup.popup_type === "new_arrival"
                 ? "New Arrival"
                 : "Limited Luxury Deal"}

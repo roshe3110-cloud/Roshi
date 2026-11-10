@@ -9,15 +9,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Refund & Exchange Policy",
+  title: "Refund & Exchange Policy | ROSHÉ BEAUTY & JEWELRY",
   description:
-    "Learn about ROSHÉ BEAUTY refund, return, exchange, and customer satisfaction policies.",
+    "Learn about ROSHÉ BEAUTY & JEWELRY refund, return, exchange, and customer satisfaction policies across Pakistan.",
   alternates: {
     canonical: "/refund-policy",
   },
   openGraph: {
     url: "/refund-policy",
-    title: "Refund & Exchange Policy | ROSHÉ BEAUTY",
+    title: "Refund & Exchange Policy | ROSHÉ BEAUTY & JEWELRY",
     description:
       "Information about returns, refunds, exchanges, and beauty satisfaction guarantee.",
   },
@@ -151,7 +151,7 @@ export default function RefundPolicyPage() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-lg text-neutral-500 leading-relaxed">
-          At ROSHÉ BEAUTY, your satisfaction matters to us. We want every purchase
+          At ROSHÉ BEAUTY &amp; JEWELRY, your satisfaction matters to us. We want every purchase
           experience to be simple, transparent, and radiant.
         </p>
       </section>

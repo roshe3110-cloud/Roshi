@@ -14,7 +14,7 @@ interface BannerSliderProps {
 const fallbackBanners: Banner[] = [
   {
     id: "fallback-banner-1",
-    title: "Unveil Your Natural Radiance with ROSHÉ BEAUTY",
+    title: "Unveil Your Natural Radiance with ROSHÉ",
     subtitle:
       "Experience pure luxury skincare, rejuvenating Vitamin C serums, and illuminating botanical formulations for timeless, glowing skin.",
     image_url: "/categories/skincare-serums.svg",
@@ -34,6 +34,18 @@ const fallbackBanners: Banner[] = [
     link_label: "Shop Cosmetics",
     is_active: true,
     sort_order: 2,
+    created_at: new Date().toISOString(),
+  },
+  {
+    id: "fallback-banner-3",
+    title: "Exquisite 18K Gold Plated & Waterproof Jewelry",
+    subtitle:
+      "Handcrafted anti-tarnish necklaces, sparkling zirconia eternity rings, and heirloom bracelets designed to complement your radiance.",
+    image_url: "/categories/fine-jewelry.svg",
+    link_href: "/collection?category=fine-jewelry",
+    link_label: "Shop Fine Jewelry",
+    is_active: true,
+    sort_order: 3,
     created_at: new Date().toISOString(),
   },
 ];
@@ -126,7 +138,7 @@ export default function BannerSlider({ banners }: BannerSliderProps) {
                     className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-[#D4A45E]/20 text-[#D4A45E] border border-[#D4A45E]/40 backdrop-blur-md mb-3 sm:mb-4 shadow-sm"
                   >
                     <Sparkles className="w-3.5 h-3.5 text-[#D4A45E]" />
-                    <span>ROSHÉ BEAUTY · Luxury Collection</span>
+                    <span>ROSHÉ BEAUTY &amp; JEWELRY · Luxury Collection</span>
                   </motion.div>
 
                   {/* Banner Title */}

@@ -10,17 +10,17 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Shipping Policy",
+  title: "Shipping Policy | ROSHÉ BEAUTY & JEWELRY",
   description:
-    "Learn about ROSHÉ BEAUTY shipping times, delivery process, and order policies across Pakistan.",
+    "Learn about ROSHÉ BEAUTY & JEWELRY shipping times, express delivery process, and order policies across Pakistan.",
   alternates: {
     canonical: "/shipping-policy",
   },
   openGraph: {
     url: "/shipping-policy",
-    title: "Shipping Policy | ROSHÉ BEAUTY",
+    title: "Shipping Policy | ROSHÉ BEAUTY & JEWELRY",
     description:
-      "Information about delivery times and shipping policies for ROSHÉ BEAUTY orders.",
+      "Information about delivery times and shipping policies for ROSHÉ BEAUTY & JEWELRY orders.",
   },
 };
 
@@ -139,7 +139,7 @@ export default function ShippingPolicyPage() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-lg text-neutral-500 leading-relaxed">
-          At ROSHÉ BEAUTY, we make sure every order is carefully packed in luxury packaging and
+          At ROSHÉ BEAUTY &amp; JEWELRY, we make sure every order is carefully packed in luxury packaging and
           delivered safely. Here is everything you need to know about our
           shipping process.
         </p>
@@ -186,7 +186,7 @@ export default function ShippingPolicyPage() {
         <h2 className="text-3xl font-bold font-heading">Delivered With Care &amp; Elegance</h2>
 
         <p className="mt-6 max-w-2xl mx-auto text-[#F4DCD8] leading-relaxed">
-          Every ROSHÉ BEAUTY order represents our commitment to quality. From
+          Every ROSHÉ BEAUTY &amp; JEWELRY order represents our commitment to quality. From
           luxurious protective packaging to reliable nationwide dispatch, we make sure your unboxing
           feels truly special from start to finish.
         </p>

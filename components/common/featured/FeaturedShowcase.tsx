@@ -61,9 +61,32 @@ const DEFAULT_SIGNATURE_BEAUTY_HIGHLIGHTS: BeautyHighlight[] = [
     highlights: [
       "Visibly brightens dull tone and fades dark spots",
       "Locks in deep 72-hour moisture with botanical hyaluronic acid",
-      "Direct consultation with ROSHÉ BEAUTY skincare specialists on WhatsApp",
+      "Direct consultation with ROSHÉ BEAUTY & JEWELRY specialists on WhatsApp",
     ],
     inquiryText: "Radiant Rose Gold Vitamin C Glow Serum Consultation",
+  },
+  {
+    id: "waterproof-gold-herringbone-chain",
+    shortTitle: "👑 18K Waterproof Jewelry",
+    badge: "18K Gold PVD · Waterproof & Anti-Tarnish",
+    title: "18K Gold-Plated Waterproof Herringbone Snake Chain",
+    tagline: "Solid 316L Stainless Steel with Permanent Gold PVD Finish",
+    description:
+      "Tired of jewelry that tarnishes after perfume or showers? Our fine jewelry is engineered with hypoallergenic 316L stainless steel and real 18K gold vacuum plating—designed to wear 24/7 without turning green or losing its luster.",
+    category: "Fine Jewelry",
+    image: "/categories/fine-jewelry.svg",
+    specs: [
+      { label: "Plating", value: "18K Gold PVD" },
+      { label: "Core Metal", value: "316L Stainless Steel" },
+      { label: "Durability", value: "100% Waterproof" },
+      { label: "Skin Safety", value: "Hypoallergenic & Nickel-Free" },
+    ],
+    highlights: [
+      "Wear in shower, pool, and gym without color fading or skin greening",
+      "Immune to perfume, sweating, and humidity",
+      "Signature ROSHÉ luxury velvet jewelry box included",
+    ],
+    inquiryText: "18K Gold Waterproof Herringbone Necklace Consultation",
   },
   {
     id: "velvet-matte-lipstick",
@@ -147,27 +170,27 @@ const fallbackFeaturedProducts: Product[] = [
   } as unknown as Product,
   {
     id: "fallback-f-2",
+    name: "18K Gold-Plated Waterproof Herringbone Snake Chain",
+    price: 3650,
+    compare_at_price: 4200,
+    slug: "18k-gold-plated-waterproof-herringbone-necklace",
+    product_images: [{ id: "fb-img-2", image_url: "/categories/fine-jewelry.svg", position: 0 }],
+  } as unknown as Product,
+  {
+    id: "fallback-f-3",
     name: "Velvet Matte Luxe Hydrating Lipstick — Rose Nude",
     price: 2950,
     compare_at_price: 3500,
     slug: "velvet-matte-luxe-lipstick",
-    product_images: [{ id: "fb-img-2", image_url: "/categories/lip-eye-care.svg", position: 0 }],
-  } as unknown as Product,
-  {
-    id: "fallback-f-3",
-    name: "Botanical Barrier Deep Restoration Moisture Cream",
-    price: 3800,
-    compare_at_price: 4400,
-    slug: "botanical-barrier-restoration-cream",
-    product_images: [{ id: "fb-img-3", image_url: "/categories/skincare-serums.svg", position: 0 }],
+    product_images: [{ id: "fb-img-3", image_url: "/categories/lip-eye-care.svg", position: 0 }],
   } as unknown as Product,
   {
     id: "fallback-f-4",
-    name: "Illuminating Pearl Highlighting & Glow Palette",
-    price: 4200,
-    compare_at_price: 4900,
-    slug: "illuminating-pearl-highlighter-palette",
-    product_images: [{ id: "fb-img-4", image_url: "/categories/luxury-cosmetics.svg", position: 0 }],
+    name: "Sparkling Zirconia Waterproof Eternity Band (18K PVD)",
+    price: 2850,
+    compare_at_price: 3400,
+    slug: "sparkling-zirconia-eternity-band-ring",
+    product_images: [{ id: "fb-img-4", image_url: "/categories/fine-jewelry.svg", position: 0 }],
   } as unknown as Product,
 ];
 
@@ -187,24 +210,24 @@ export default function FeaturedShowcase({
         shortTitle: `✨ ${p.name.split(" ").slice(0, 3).join(" ")}`,
         badge: "New Release · Upcoming Beauty",
         title: p.name,
-        tagline: "Formulated by ROSHÉ BEAUTY Specialists",
+        tagline: "Curated by ROSHÉ BEAUTY & JEWELRY Specialists",
         description:
           p.description ||
-          "Looking for product ingredients, shade guidance, or skin suitability? Consult our beauty team directly on WhatsApp for full details and swatches.",
-        category: "Upcoming Beauty",
+          "Looking for product ingredients, shade guidance, or jewelry specifications? Consult our team directly on WhatsApp for full details and swatches.",
+        category: "Upcoming Exclusives",
         image: p.product_images?.[0]?.image_url || "/placeholder.svg",
         specs: [
           { label: "Status", value: "New Arrival" },
-          { label: "Formula", value: "Dermatologist Tested" },
+          { label: "Quality", value: "Verified Authentic" },
           { label: "Consultation", value: "Available on WhatsApp" },
           { label: "Dispatch Area", value: "Nationwide Pakistan" },
         ],
         highlights: [
-          "Pure, fresh, and authentic beauty formulations",
-          "Personalized routine and shade consultation",
-          "Direct WhatsApp care from ROSHÉ BEAUTY specialists",
+          "Pure, fresh, and authentic beauty and jewelry creations",
+          "Personalized routine, shade, and sizing consultations",
+          "Direct WhatsApp care from ROSHÉ BEAUTY & JEWELRY specialists",
         ],
-        inquiryText: `${p.name} Details & Beauty Advice`,
+        inquiryText: `${p.name} Details & Consultation`,
       }));
       return [...dbHighlights, ...DEFAULT_SIGNATURE_BEAUTY_HIGHLIGHTS];
     }
@@ -231,7 +254,7 @@ export default function FeaturedShowcase({
     upcomingImgSrc || currentHighlight?.image || "/placeholder.svg";
 
   const whatsappInquiryUrl = `https://wa.me/${STORE_CONTACT.whatsappNumber}?text=${encodeURIComponent(
-    `Hi ROSHÉ BEAUTY! I would like personal beauty recommendations and details for: ${currentHighlight.title}. Please provide shade and routine advice.`
+    `Hi ROSHÉ BEAUTY & JEWELRY! I would like personal advice and details for: ${currentHighlight.title}. Please provide details.`
   )}`;
 
   return (
@@ -247,7 +270,7 @@ export default function FeaturedShowcase({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 mb-6 border-b border-white/10">
             <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[#D4A45E]">
               <Sparkles className="w-4 h-4" />
-              <span>ROSHÉ Signature Formulations</span>
+              <span>ROSHÉ Signature Exclusives</span>
             </div>
 
             {/* Interactive Solution Tabs */}
@@ -343,7 +366,7 @@ export default function FeaturedShowcase({
                     className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#D4A45E] to-[#B8893E] px-5 py-3 text-xs sm:text-sm font-bold text-black shadow-lg shadow-[#D4A45E]/20 transition-all hover:brightness-110 active:scale-95"
                   >
                     <MessageCircle className="w-4 h-4" />
-                    <span>Ask Beauty Care on WhatsApp</span>
+                    <span>Ask Concierge on WhatsApp</span>
                   </a>
 
                   <Link
@@ -418,17 +441,17 @@ export default function FeaturedShowcase({
           <div>
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#D4A45E] mb-1">
               <Flame className="w-4 h-4 text-[#D4A45E]" />
-              <span>Handpicked Radiance</span>
+              <span>Handpicked Luxury</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#704638] font-heading">
-              Featured Beauty Collection
+              Featured Beauty &amp; Jewelry Exclusives
             </h2>
           </div>
           <Link
             href="/collection"
             className="group flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#704638] hover:text-[#D4A45E] transition-colors"
           >
-            <span>Explore All Beauty</span>
+            <span>Explore Entire Collection</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

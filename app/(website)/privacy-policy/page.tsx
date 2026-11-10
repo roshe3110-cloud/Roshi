@@ -1,5 +1,5 @@
 // app/privacy-policy/page.tsx
-
+import type { Metadata } from "next";
 import {
   ShieldCheck,
   Lock,
@@ -10,6 +10,15 @@ import {
   Mail,
   RefreshCw,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | ROSHÉ BEAUTY & JEWELRY",
+  description:
+    "Learn about ROSHÉ BEAUTY & JEWELRY privacy protection, customer data security, and shopping rights across Pakistan.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+};
 
 const sections = [
   {
@@ -155,7 +164,7 @@ export default function PrivacyPolicyPage() {
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              At <span className="font-semibold text-primary">ROSHÉ BEAUTY</span>, protecting
+              At <span className="font-semibold text-primary">ROSHÉ BEAUTY &amp; JEWELRY</span>, protecting
               your personal information is one of our highest priorities. This
               policy explains how we collect, use, and safeguard your data when
               you browse or shop with us.
@@ -169,7 +178,7 @@ export default function PrivacyPolicyPage() {
         <div className="rounded-3xl border bg-card p-8 shadow-sm">
           <p className="leading-8 text-muted-foreground">
             We value the trust you place in us. Every piece of personal
-            information shared with ROSHÉ BEAUTY is handled responsibly and
+            information shared with ROSHÉ BEAUTY &amp; JEWELRY is handled responsibly and
             securely. We never sell your personal information, and we only share
             it with trusted partners when necessary to provide our services.
           </p>

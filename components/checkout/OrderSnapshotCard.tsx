@@ -63,7 +63,7 @@ export const OrderSnapshotCard: React.FC<OrderSnapshotCardProps> = ({ order }) =
           <div className="relative w-16 h-16 rounded-2xl bg-white/10 border border-[#D4A45E]/40 p-2 backdrop-blur-md shrink-0 flex items-center justify-center overflow-hidden shadow-inner">
             <Image
               src="/logo.png"
-              alt="ROSHÉ BEAUTY Logo"
+              alt="ROSHÉ BEAUTY &amp; JEWELRY Logo"
               width={64}
               height={64}
               sizes="64px"
@@ -231,10 +231,10 @@ export const OrderSnapshotCard: React.FC<OrderSnapshotCardProps> = ({ order }) =
         {/* Store Verification Footer */}
         <div className="pt-2 text-center border-t border-gray-100 text-[11px] text-[#8C5E50] space-y-1">
           <p className="font-medium text-[#704638]">
-            ROSHÉ BEAUTY · {STORE_CONTACT.address} · Helpline: {STORE_CONTACT.phoneFormatted}
+            ROSHÉ BEAUTY &amp; JEWELRY · {STORE_CONTACT.address} · Helpline: {STORE_CONTACT.phoneFormatted}
           </p>
           <p>
-            Please send your payment slip to WhatsApp ({STORE_CONTACT.phoneFormatted}) to initiate beauty parcel dispatch.
+            Please send your payment slip to WhatsApp ({STORE_CONTACT.phoneFormatted}) to initiate parcel dispatch.
           </p>
         </div>
       </div>

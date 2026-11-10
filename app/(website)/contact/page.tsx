@@ -29,15 +29,15 @@ const fadeUp = {
 const pillars = [
   {
     icon: Sparkles,
-    title: "Personalized Beauty Care",
+    title: "Personalized Beauty & Styling Care",
     description:
-      "Expert assistance in shade selection, skincare routine building, and product recommendations.",
+      "Expert assistance in shade selection, skincare routine building, and waterproof jewelry sizing.",
   },
   {
     icon: ShieldCheck,
-    title: "100% Authentic Quality",
+    title: "100% Authentic Quality & 18K PVD Jewels",
     description:
-      "Certified original, dermatologist-tested beauty formulations and clean, safe ingredients.",
+      "Certified original, dermatologist-tested beauty formulations and anti-tarnish, hypoallergenic waterproof jewelry.",
   },
   {
     icon: Truck,
@@ -63,7 +63,7 @@ export default function ContactPage() {
             className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#D4A45E]/20 text-[#D4A45E] border border-[#D4A45E]/40 mb-5"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Customer Care &amp; Beauty And Jewlry Consultations</span>
+            <span>Customer Care &amp; Beauty &amp; Jewelry Consultations</span>
           </motion.div>
 
           <motion.h1
@@ -75,7 +75,7 @@ export default function ContactPage() {
           >
             Contact{" "}
             <span className="bg-gradient-to-r from-[#F4DCD8] via-[#D4A45E] to-[#FFFFFF] bg-clip-text text-transparent">
-              ROSHÉ 
+              ROSHÉ BEAUTY &amp; JEWELRY
             </span>
           </motion.h1>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
             custom={0.2}
             className="max-w-2xl mx-auto mt-5 text-base sm:text-lg text-[#F4DCD8] leading-relaxed"
           >
-            Have questions about product shades, ingredients, routine recommendations, or orders? Our dedicated beauty specialists are here to help you glow.
+            Have questions about skincare routines, cosmetics shades, waterproof jewelry sizing, or orders? Our beauty and jewelry specialists are here to assist you.
           </motion.p>
         </div>
       </section>
@@ -110,7 +110,7 @@ export default function ContactPage() {
                 WhatsApp &amp; Direct Call
               </h2>
               <p className="text-xs text-[#8C5E50] mb-4">
-                Fastest response for beauty advice &amp; order payment slips
+                Fastest response for beauty &amp; jewelry consultations &amp; orders
               </p>
               <span className="text-sm font-bold text-emerald-600 block">
                 {STORE_CONTACT.phoneFormatted}
@@ -172,10 +172,10 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-[#D4A45E]">
-              OUR BEAUTY PROMISE
+              OUR BEAUTY &amp; JEWELRY PROMISE
             </span>
             <h2 className="text-3xl font-extrabold text-[#704638] mt-2 font-heading">
-              Why Choose ROSHÉ BEAUTY?
+              Why Choose ROSHÉ BEAUTY &amp; JEWELRY?
             </h2>
           </div>
 

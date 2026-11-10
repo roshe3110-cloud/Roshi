@@ -40,10 +40,10 @@ export default function ProductsGrid({ products }: ProductsGridProps) {
         <div>
           <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#D4A45E] mb-1">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Curated Radiance Inventory</span>
+            <span>Curated Luxury Inventory</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#704638] font-heading">
-            New Beauty Arrivals &amp; Bestselling Formulations
+            New Beauty &amp; Jewelry Arrivals
           </h2>
         </div>
 
@@ -51,7 +51,7 @@ export default function ProductsGrid({ products }: ProductsGridProps) {
           href="/collection"
           className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#704638] hover:text-[#D4A45E] transition-colors"
         >
-          <span>View All Beauty</span>
+          <span>View Entire Collection</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </Link>
       </div>

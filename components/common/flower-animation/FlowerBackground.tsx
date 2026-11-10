@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const emptySubscribe = () => () => {};
 
 /**
- * 🌸 Mobile-Optimized Background Flower & Ambient Glow for ROSHÉ BEAUTY
+ * 🌸 Mobile-Optimized Background Flower & Ambient Glow for ROSHÉ BEAUTY & JEWELRY
  *
  * Crash & Lag Prevention Engineering:
  * 1. Zero Dynamic Blurs: Removed all heavy `blur-3xl` scaling divs that cause mobile GPU panic/crashes (Jetsam OOM).

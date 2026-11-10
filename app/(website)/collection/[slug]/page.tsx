@@ -92,17 +92,17 @@ export async function generateMetadata({
 
   if (!rawProduct) {
     return {
-      title: "Product Not Found | ROSHÉ BEAUTY",
+      title: "Product Not Found | ROSHÉ BEAUTY & JEWELRY",
     };
   }
 
   const product = formatProduct(rawProduct);
 
   return {
-    title: `${product.name} | ROSHÉ BEAUTY`,
+    title: `${product.name} | ROSHÉ BEAUTY & JEWELRY`,
     description: product.description,
     openGraph: {
-      title: `${product.name} | ROSHÉ BEAUTY`,
+      title: `${product.name} | ROSHÉ BEAUTY & JEWELRY`,
       description: product.description,
       images: [
         {

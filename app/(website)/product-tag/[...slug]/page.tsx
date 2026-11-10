@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .join(" ");
 
   return {
-    title: `${title} - Tag | The 960 Club`,
-    description: `Browse items tagged with ${title} at The 960 Club. Premium waterproof stainless steel jewelry and accessories.`,
+    title: `${title} - Tag | ROSHÉ BEAUTY & JEWELRY`,
+    description: `Browse items tagged with ${title} at ROSHÉ BEAUTY & JEWELRY. Premium beauty, cosmetics, and fine jewelry essentials.`,
     alternates: {
       canonical: `/product-tag/${tagSlug}`,
     },

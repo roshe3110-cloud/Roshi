@@ -3,7 +3,7 @@
 import { useCartStore } from "@/store";
 import { toast } from "sonner";
 import ProductCard from "@/components/common/product-card/ProductCard";
-import { Zap } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export interface RelatedProduct {
   id: string;
@@ -42,18 +42,18 @@ export default function RelatedProducts({ products }: RelatedProductsProps) {
 
   return (
     <section className="mt-20 space-y-8">
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-neutral-200 pb-4">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-[#D4A45E]/30 pb-4">
         <div>
-          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#d4af37] mb-1">
-            <Zap className="w-3.5 h-3.5" />
-            <span>Hardware Ecosystem</span>
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#D4A45E] mb-1">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Curated Pairings</span>
           </div>
-          <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl text-neutral-900">
-            Compatible & Related Units
+          <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl text-[#704638] font-heading">
+            Complete Your Look &amp; Routine
           </h2>
         </div>
-        <p className="text-xs text-neutral-500">
-          Industrial equipment & accessories matched for this hardware.
+        <p className="text-xs text-[#8C5E50]">
+          Complementary skincare formulations, velvet cosmetics, and waterproof fine jewelry.
         </p>
       </div>
 

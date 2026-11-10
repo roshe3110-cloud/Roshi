@@ -32,10 +32,10 @@ function CollectionShowcase({ items }: Props) {
             <span>Curated Categories</span>
           </div>
           <h2 className="font-heading text-3xl font-extrabold tracking-tight text-[#704638] sm:text-4xl lg:text-5xl">
-            Explore Beauty Categories
+            Explore Beauty &amp; Jewelry Categories
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-[#8C5E50] max-w-md mx-auto">
-            Indulge in radiant skincare rituals, luxurious cosmetics, and nourishing beauty formulations for your daily glow.
+            Indulge in radiant skincare rituals, luxurious cosmetics, and 18K gold-plated waterproof fine jewelry.
           </p>
         </div>
 

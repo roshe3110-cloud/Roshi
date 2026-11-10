@@ -13,15 +13,15 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Beauty Collection | ROSHÉ BEAUTY",
+  title: "Beauty & Jewelry Collection | ROSHÉ BEAUTY & JEWELRY",
   description:
-    "Browse our full collection of luxury skincare, velvet matte cosmetics, face serums, and radiant beauty essentials. Free shipping across Pakistan.",
+    "Browse our full collection of luxury skincare, velvet matte cosmetics, and 18K gold-plated waterproof fine jewelry. Free nationwide shipping across Pakistan.",
   alternates: { canonical: "/collection" },
   openGraph: {
     url: "/collection",
-    title: "Beauty Collection | ROSHÉ BEAUTY",
+    title: "Beauty & Jewelry Collection | ROSHÉ BEAUTY & JEWELRY",
     description:
-      "Browse premium luxury skincare, velvet matte cosmetics, and glowing beauty essentials at ROSHÉ BEAUTY.",
+      "Browse premium luxury skincare, cosmetics, and 18K gold-plated waterproof jewelry at ROSHÉ BEAUTY & JEWELRY.",
   },
 };
 
@@ -49,6 +49,15 @@ const fallbackCollectionPlaceholder = [
   },
   {
     id: "fb-col-2",
+    slug: "18k-gold-plated-waterproof-herringbone-necklace",
+    name: "18K Gold-Plated Waterproof Herringbone Snake Chain",
+    image: "/categories/fine-jewelry.svg",
+    price: 3650,
+    oldPrice: 4200,
+    sale: true,
+  },
+  {
+    id: "fb-col-3",
     slug: "velvet-matte-luxe-lipstick",
     name: "Velvet Matte Luxe Hydrating Lipstick — Rose Nude",
     image: "/categories/lip-eye-care.svg",
@@ -57,7 +66,16 @@ const fallbackCollectionPlaceholder = [
     sale: false,
   },
   {
-    id: "fb-col-3",
+    id: "fb-col-4",
+    slug: "sparkling-zirconia-eternity-band-ring",
+    name: "Sparkling Zirconia Waterproof Eternity Band (18K PVD)",
+    image: "/categories/fine-jewelry.svg",
+    price: 2850,
+    oldPrice: 3400,
+    sale: true,
+  },
+  {
+    id: "fb-col-5",
     slug: "botanical-barrier-restoration-cream",
     name: "Botanical Barrier Deep Restoration Moisture Cream",
     image: "/categories/skincare-serums.svg",
@@ -66,12 +84,12 @@ const fallbackCollectionPlaceholder = [
     sale: false,
   },
   {
-    id: "fb-col-4",
-    slug: "illuminating-pearl-highlighter-palette",
-    name: "Illuminating Pearl Highlighting & Glow Palette",
-    image: "/categories/luxury-cosmetics.svg",
+    id: "fb-col-6",
+    slug: "roman-numeral-waterproof-cuff-bangle",
+    name: "Roman Dial Minimalist Waterproof Cuff Bangle (Gold)",
+    image: "/categories/fine-jewelry.svg",
     price: 4200,
-    oldPrice: 4900,
+    oldPrice: 4950,
     sale: true,
   },
 ];
@@ -160,13 +178,13 @@ export default async function CollectionPage({ searchParams }: Props) {
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-[#F4DCD8] text-[#704638] border border-[#D4A45E]/30 mb-2 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#D4A45E]" />
-              <span>Curated Beauty Catalog</span>
+              <span>Curated Beauty & Jewelry Catalog</span>
             </div>
             <h1 className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#704638]">
               The Collection
             </h1>
             <p className="mt-1 text-xs sm:text-sm text-[#8C5E50]">
-              Discover radiant skincare formulations, velvet pigments, and luxury beauty essentials.
+              Discover radiant skincare formulations, velvet pigments, and 18K gold-plated waterproof fine jewelry.
             </p>
           </div>
 
@@ -237,7 +255,7 @@ export default async function CollectionPage({ searchParams }: Props) {
                 No Products Found
               </h3>
               <p className="mx-auto max-w-sm text-sm text-[#8C5E50] mb-6">
-                We couldn&apos;t find any beauty items matching your selection. Try selecting a different category or clearing your search.
+                We couldn&apos;t find any beauty or jewelry items matching your selection. Try selecting a different category or clearing your search.
               </p>
               <a
                 href="/collection"

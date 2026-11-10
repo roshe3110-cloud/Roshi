@@ -32,51 +32,59 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://roshebeauty.com"),
   title: {
     default:
-      "ROSHÉ BEAUTY | Luxury Skincare, Cosmetics & Radiant Beauty Essentials",
-    template: "%s | ROSHÉ BEAUTY",
+      "ROSHÉ BEAUTY & JEWELRY | Luxury Skincare, Cosmetics & Fine Jewelry",
+    template: "%s | ROSHÉ BEAUTY & JEWELRY",
   },
   description:
-    "Discover ROSHÉ BEAUTY — Pakistan's premier destination for pure luxury skincare, radiant cosmetic formulations, and rejuvenating beauty essentials with nationwide delivery.",
+    "Discover ROSHÉ BEAUTY & JEWELRY — Pakistan's premier destination for pure luxury skincare, radiant cosmetic formulations, and exquisite 18K gold-plated waterproof jewelry with nationwide delivery.",
   keywords: [
     "ROSHÉ BEAUTY",
+    "ROSHÉ BEAUTY & JEWELRY",
     "Roshe Beauty",
     "Luxury Skincare Pakistan",
     "Cosmetics Pakistan",
+    "Fine Jewelry Pakistan",
+    "Waterproof Jewelry",
+    "18K Gold Plated Jewelry",
+    "Anti Tarnish Jewelry",
+    "Necklaces",
+    "Rings",
+    "Bracelets",
+    "Earrings",
     "Face Serums",
     "Lipstick",
     "Velvet Matte",
     "Radiant Glow",
     "Hydrating Skincare",
-    "Dermatology Tested Cosmetics",
   ],
-  authors: [{ name: "ROSHÉ BEAUTY", url: "https://roshebeauty.com" }],
-  creator: "ROSHÉ BEAUTY",
-  publisher: "ROSHÉ BEAUTY",
-  category: "Beauty, Cosmetics & Personal Care",
+  authors: [{ name: "ROSHÉ BEAUTY & JEWELRY", url: "https://roshebeauty.com" }],
+  creator: "ROSHÉ BEAUTY & JEWELRY",
+  publisher: "ROSHÉ BEAUTY & JEWELRY",
+  category: "Beauty, Cosmetics & Fine Jewelry",
   openGraph: {
     type: "website",
     locale: "en_PK",
     url: "https://roshebeauty.com",
-    siteName: "ROSHÉ BEAUTY",
+    siteName: "ROSHÉ BEAUTY & JEWELRY",
     title:
-      "ROSHÉ BEAUTY | Luxury Skincare, Cosmetics & Radiant Beauty Essentials",
+      "ROSHÉ BEAUTY & JEWELRY | Luxury Skincare, Cosmetics & Fine Jewelry",
     description:
-      "Your trusted destination for pure luxury skincare, radiant cosmetic formulations, and rejuvenating beauty essentials. 100% authentic with nationwide delivery.",
+      "Your trusted destination for pure luxury skincare, radiant cosmetic formulations, and 18K gold-plated waterproof fine jewelry. 100% authentic with nationwide delivery.",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "ROSHÉ BEAUTY — Luxury Skincare & Cosmetics",
+        alt: "ROSHÉ BEAUTY & JEWELRY — Luxury Skincare, Cosmetics & Fine Jewelry",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "ROSHÉ BEAUTY | Luxury Skincare, Cosmetics & Radiant Beauty Essentials",
+      "ROSHÉ BEAUTY & JEWELRY | Luxury Skincare, Cosmetics & Fine Jewelry",
     description:
-      "Pure luxury skincare, cosmetics, and radiant beauty essentials with nationwide delivery.",
+      "Pure luxury skincare, velvet cosmetics, and 18K gold-plated fine jewelry with nationwide delivery.",
     images: ["/logo.png"],
   },
   robots: {
@@ -97,11 +105,11 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://roshebeauty.com/#organization",
-      name: "ROSHÉ BEAUTY",
+      name: "ROSHÉ BEAUTY & JEWELRY",
       url: "https://roshebeauty.com",
       logo: "https://roshebeauty.com/logo.png",
       description:
-        "Pakistan's premier brand for luxury skincare, cosmetics, and rejuvenating beauty solutions.",
+        "Pakistan's premier brand for luxury skincare, cosmetics, and handcrafted 18K gold-plated waterproof fine jewelry.",
       email: STORE_CONTACT.email,
       contactPoint: {
         "@type": "ContactPoint",
@@ -114,7 +122,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": "https://roshebeauty.com/#website",
       url: "https://roshebeauty.com",
-      name: "ROSHÉ BEAUTY",
+      name: "ROSHÉ BEAUTY & JEWELRY",
       publisher: {
         "@id": "https://roshebeauty.com/#organization",
       },

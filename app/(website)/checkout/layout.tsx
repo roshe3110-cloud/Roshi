@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Checkout",
-  description: "Secure checkout. Complete your details to place your order with The 960 Club.",
+  title: "Checkout | ROSHÉ BEAUTY & JEWELRY",
+  description: "Secure checkout. Complete your details to place your order with ROSHÉ BEAUTY & JEWELRY.",
 };
 
 export default function CheckoutLayout({

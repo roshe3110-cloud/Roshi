@@ -89,7 +89,7 @@ export const OrderConfirmationTemplate = (
       ${renderItemsTable(items)}
 
       <p style="margin-top: 30px;">We will send you another email once your order has shipped.</p>
-      <p>Best regards,<br/><strong>ROSHÉ BEAUTY</strong></p>
+      <p>Best regards,<br/><strong>ROSHÉ BEAUTY &amp; JEWELRY</strong><br/><span style="font-size: 12px; color: #777;">WhatsApp / Helpline: +92 347 1060653 | Roshe3110@gmail.com</span></p>
     </div>
   `;
 };
@@ -108,7 +108,7 @@ export const OrderShippedTemplate = (
       ${renderItemsTable(items)}
 
       <p style="margin-top: 30px;">You can track your order using the link provided on your account dashboard.</p>
-      <p>Best regards,<br/><strong>ROSHÉ BEAUTY</strong></p>
+      <p>Best regards,<br/><strong>ROSHÉ BEAUTY &amp; JEWELRY</strong><br/><span style="font-size: 12px; color: #777;">WhatsApp / Helpline: +92 347 1060653 | Roshe3110@gmail.com</span></p>
     </div>
   `;
 };
@@ -127,7 +127,7 @@ export const OrderDeliveredTemplate = (
       ${renderItemsTable(items)}
 
       <p style="margin-top: 30px;">Thank you for your business. We hope to see you again soon!</p>
-      <p>Best regards,<br/><strong>ROSHÉ BEAUTY</strong></p>
+      <p>Best regards,<br/><strong>ROSHÉ BEAUTY &amp; JEWELRY</strong><br/><span style="font-size: 12px; color: #777;">WhatsApp / Helpline: +92 347 1060653 | Roshe3110@gmail.com</span></p>
     </div>
   `;
 };
@@ -141,8 +141,8 @@ export const OrderCancelledTemplate = (
       <h2 style="color: #d9534f;">Order Cancelled</h2>
       <p>Hello ${customerName},</p>
       <p>We regret to inform you that your order <strong>#${orderId}</strong> has been cancelled.</p>
-      <p>If you have any questions or concerns, please reply to this email or contact our support team.</p>
-      <p>Best regards,<br/><strong>ROSHÉ BEAUTY</strong></p>
+      <p>If you have any questions or concerns, please reply to this email or contact our support team on WhatsApp at <strong>+92 347 1060653</strong>.</p>
+      <p>Best regards,<br/><strong>ROSHÉ BEAUTY &amp; JEWELRY</strong></p>
     </div>
   `;
 };
@@ -163,7 +163,7 @@ export const AdminNotificationTemplate = (
       ${renderItemsTable(items)}
       
       <p style="margin-top: 30px;">Please login to your admin panel to manage this order.</p>
-      <p>Best regards,<br/><strong>ROSHÉ BEAUTY</strong></p>
+      <p>Best regards,<br/><strong>ROSHÉ BEAUTY &amp; JEWELRY Admin System</strong></p>
     </div>
   `;
 };
@@ -180,7 +180,7 @@ export const AdminLoginFailedAlertTemplate = (
       </div>
       <div style="padding: 20px;">
         <p style="font-size: 14px; line-height: 1.5; color: #111;">
-          Multiple consecutive failed login attempts (3/3 attempts) were detected on the <strong>ROSHÉ BEAUTY Admin Portal</strong>.
+          Multiple consecutive failed login attempts (3/3 attempts) were detected on the <strong>ROSHÉ BEAUTY &amp; JEWELRY Admin Portal</strong>.
         </p>
         <table style="width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px;">
           <tr>
